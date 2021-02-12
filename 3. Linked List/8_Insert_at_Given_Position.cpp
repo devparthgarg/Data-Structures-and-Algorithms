@@ -14,8 +14,34 @@ class node
     }
 };
 
+int length(node* head)
+{
+    int len=0;
+    while(head!=NULL)
+    {
+        len++;
+        head=head->next;
+    }
+
+    return len;
+}
+
 void insertAtPthPosition(node* &head,int d,int p)
 {
+    if(p<1 or p>(length(head)+1))
+    {
+        return ;
+    }
+
+    if(p==1)
+    {
+        node* n=new node(d);
+        n->next=head;
+        head=n;
+
+        return ;
+    }
+
     int jump=0;
     node* temp=head;
     while(jump<(p-2))
