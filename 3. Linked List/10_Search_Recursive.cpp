@@ -28,7 +28,7 @@ void insertAtHead(node* &head,int d)
     return ;
 }
 
-int searchRecursive(node* head,int d)
+int searchRecursive(node* head,int d) //Time Complexity O(n)
 {
     //base case
     if(head==NULL)
