@@ -28,7 +28,7 @@ void insertAtHead(node* &head,int d)
     return ;
 }
 
-int searchIterative(node* head,int d)
+int searchIterative(node* head,int d) //Time Comp. O(n)
 {
     int count=0;
     while(head!=NULL)
