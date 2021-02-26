@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void towerOfHanoi(int n,char A,char B,char C)
+void towerOfHanoi(int n,char A,char B,char C)//min moves required are : ((2^n)-1)
 {
     if(n==1)
     {
