@@ -18,7 +18,7 @@ class node
 
 /*
 Time comp. O(n)
-Aux Space O(w) , w=width of tree
+Aux Space O(w) , w = width of tree
 */
 
 /*
