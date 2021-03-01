@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int insert(int *arr,int n,int key,int pos)
+int insert(int *arr,int n,int key,int pos)//time comp. O(n)
 {
     for(int i=n-1;i>=pos-1;i--)
     {
