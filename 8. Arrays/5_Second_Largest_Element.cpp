@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int largest(int a[],int n)//time comp. O(n)
+int largest(int a[],int n)
 {
     int max=INT_MIN;
     for(int i=0;i<n;i++)
@@ -15,7 +15,7 @@ int largest(int a[],int n)//time comp. O(n)
     return max;
 }
 
-int secondLargest(int arr[],int n)
+int secondLargest(int arr[],int n)//time comp. O(n)
 {
     int max=largest(arr,n);
     int res=0;
