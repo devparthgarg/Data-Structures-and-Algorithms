@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int linearSearch(int arr[],int n,int key)
+int linearSearch(int arr[],int n,int key)//time comp. O(n)
 {
     for(int i=0;i<n;i++)
     {
