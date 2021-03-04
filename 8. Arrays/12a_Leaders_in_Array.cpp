@@ -2,7 +2,7 @@
 using namespace std;
 
 //leader - nothing greater in right of it (equals are not allowed)
-void leaders(int *a,int n)
+void leaders(int *a,int n)//time comp. O(n^2)
 {
     for(int i=0;i<n;i++)
     {
