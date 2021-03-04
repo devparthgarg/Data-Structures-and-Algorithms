@@ -12,6 +12,7 @@ void leaders(int *a,int n)
             if(a[j]>=a[i])
             {
                 flag=false;
+                break;
             }
         }
         if(flag==true)
