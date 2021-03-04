@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int maxDiff(int *a,int n)
+int maxDiff(int *a,int n)//time comp. O(n^2)
 {
     int max_diff=INT_MIN;
     for(int i=0;i<n;i++)
