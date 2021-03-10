@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int maxLengthEvenOddSubArray(int *a,int n)
+int maxLengthEvenOddSubArray(int *a,int n)//time comp. O(n)
 {
     int res=1;
     int curr=1;
