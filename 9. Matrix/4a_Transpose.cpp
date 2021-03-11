@@ -2,7 +2,7 @@
 using namespace std;
 const int n=4;
 
-void transpose(int arr[n][n])//time comp. O(n)
+void transpose(int arr[n][n])//time comp. O(n^2)
 {
    int temp[n][n];
    for(int i=0;i<n;i++)
