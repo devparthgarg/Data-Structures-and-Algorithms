@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int binarySearchRecursive(int *arr,int l,int h,int key)//time comp. O(nlogn) ; space comp. O(logn)
+int binarySearchRecursive(int *arr,int l,int h,int key)//time comp. O(logn) ; space comp. O(logn)
 {
     if(l>h)
     {

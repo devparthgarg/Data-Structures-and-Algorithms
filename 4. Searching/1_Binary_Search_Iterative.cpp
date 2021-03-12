@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool binarySearch(int a[],int n,int key)
+
+bool binarySearch(int a[],int n,int key)//time comp. O(logn) ; space comp. O(1)
 {
     int l=0;
     int h=n-1;
@@ -23,6 +24,8 @@ bool binarySearch(int a[],int n,int key)
 
     return false;
 }
+
+//height of binary search tree generated : ceil(logn) (base 2)
 int main()
 {
     int n;
