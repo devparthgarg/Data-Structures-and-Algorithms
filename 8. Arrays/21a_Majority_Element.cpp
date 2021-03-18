@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int majorityElement(int arr[],int n)
+int majorityElement(int arr[],int n)//time comp. O(n^2)
 {
     for(int i=0;i<n;i++)
     {
