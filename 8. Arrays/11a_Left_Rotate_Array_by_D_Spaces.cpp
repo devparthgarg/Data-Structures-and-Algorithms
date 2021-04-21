@@ -3,6 +3,7 @@ using namespace std;
 
 void rotateDspaces(int a[],int n,int d)//time comp. O(n^2)
 {
+    d=d%n;//to eliminate extra repeated iterations 
     for(int k=0;k<d;k++)
     {
         int temp=a[0];
@@ -33,6 +34,7 @@ int main()
     {
         cin>>arr[i];
     }
+
     int d;
     cin>>d;
 
