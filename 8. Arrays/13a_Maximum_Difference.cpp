@@ -6,7 +6,6 @@ int maxDiff(int *a,int n)//time comp. O(n^2)
     int max_diff=INT_MIN;
     for(int i=0;i<n;i++)
     {
-        int e1=a[i];
         int curr_diff=0;
         for(int j=i+1;j<n;j++)
         {
