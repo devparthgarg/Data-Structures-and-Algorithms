@@ -15,7 +15,7 @@ int largest(int a[],int n)
     return max;
 }
 
-int secondLargest(int arr[],int n)//time comp. O(n)
+int secondLargest(int arr[],int n)//time comp. O(n) - but it is taking 2 traversals : one in computing largest and and other in computing second largest
 {
     int max=largest(arr,n);
     int res=0;
