@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void printFrequencies(int *a,int n)//time comp. O(n^2)
+void printFrequencies(int *a,int n)//time comp. O(n) : as i is incremented in both loops
 {
     int freq=1,i=1;
     
