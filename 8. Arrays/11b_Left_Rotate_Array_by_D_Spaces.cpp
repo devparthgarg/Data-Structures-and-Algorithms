@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void rotateDspaces(int a[],int n,int d)//time comp. O(n) ; space comp. O(n)
+void rotateDspaces(int a[],int n,int d)//time comp. O(n) ; space comp. O(d)
 {
     d=d%n;//to eliminate extra repeated iterations
 
