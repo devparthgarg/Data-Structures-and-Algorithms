@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Kadane's Algo
 //subarray - contigous elements
 int maxSubarraySum(int *a,int n)//time comp. O(n)
 {
