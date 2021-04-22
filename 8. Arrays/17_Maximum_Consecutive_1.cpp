@@ -3,25 +3,24 @@ using namespace std;
 
 int maxConsecutive1(int *a,int n)//time comp. O(n)
 {
-    int cnt=0;
-    int max1=0;
-    for(int i=0;i<n;i++)
-    {
-        if(a[i]==1)
-        {
-            cnt++;
-        }
-        else
-        {
-            cnt=0;
-        }
-        if(cnt>max1)
-        {
-            max1=cnt;
-        }
-    }
+   int count=0;
+   int maxi=0;
+   for(int i=0;i<n;i++)
+   {
+       if(a[i]==0)
+       {
+           count=0;
+           continue;
+       }
 
-    return max1;
+       count++;
+       if(count>maxi)
+       {
+           maxi=count;
+       }
+   }
+
+   return maxi;
 }
 
 int main()
