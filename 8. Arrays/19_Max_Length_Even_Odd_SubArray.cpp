@@ -3,22 +3,30 @@ using namespace std;
 
 int maxLengthEvenOddSubArray(int *a,int n)//time comp. O(n)
 {
-    int res=1;
-    int curr=1;
-    for(int i=1;i<n;i++)
+    /*
+    concept : sum of two even no.s is even , also for two odd numbers sum is even
+    but for one even and one odd sum is odd  
+    */
+    
+    int len=1;
+    int maxlen=1;
+
+    for(int i=0;i<n-1;i++)
     {
-        if((a[i]%2==0 and a[i-1]%2!=0) or (a[i]%2!=0 and a[i-1]%2==0))
+        int sum=a[i]+a[i+1];
+
+        if(sum%2==1)
         {
-            curr++;
-            res=max(res,curr);
+            len++;
+            maxlen=max(len,maxlen);
         }
         else
         {
-            curr=1;
+            len=1;
         }
     }
 
-    return res;
+    return maxlen;
 }
 
 int main()
