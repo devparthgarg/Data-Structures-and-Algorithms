@@ -13,7 +13,7 @@ A repository which contains DSA Questions from Basic to Advanced . Contents :
 11) Stack	  	
 12) Queue	     	
 13) Deque	     	
-14) Tree	    	
+14) Binary Tree	    	
 15) Binary Search Tree     	
 16) Heap
 17) Graph	    	
