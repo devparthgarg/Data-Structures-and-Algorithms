@@ -2,7 +2,7 @@
 using namespace std;
 
 //Naive Solution - Causes overflow
-int countZeroes(int n)
+int countZeroes(int n)//time comp. O(n)
 {
     int fact=1;
     for(int i=n;i>=1;i--)
@@ -21,8 +21,7 @@ int countZeroes(int n)
 }
 
 //Efficient Solution - count number of times 5 occurs
-// Time Complexity : O(Logn)
-int countZeroesEfficient(int n)
+int countZeroesEfficient(int n)//time comp. O(Logn)
 {
     int cnt=0;
 
