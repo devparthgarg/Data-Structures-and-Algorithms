@@ -2,6 +2,12 @@
 using namespace std;
 
 /*
+Fact :
+any prime no. except 2 and 3 can be written
+in form of (6n+1) or (6n-1)
+*/
+
+/*
 Divisors always appear in pairs
 if (x,y) is a pair
 x*y=n
@@ -10,7 +16,7 @@ x*x <= n
 x <= sqrt(n)
 */
 
-bool isPrime(int n)
+bool isPrime(int n)//time comp. O(sqrt(n))
 {
     if(n==1)
     {

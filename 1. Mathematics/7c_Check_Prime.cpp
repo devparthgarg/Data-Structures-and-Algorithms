@@ -1,8 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// More Effcient Method for large value of n
+/*
+Fact :
+any prime no. except 2 and 3 can be written
+in form of (6n+1) or (6n-1)
+*/
 
+// More Effcient Method for large value of n
 bool isPrime(int n)
 {
     if(n==1)
