@@ -1,6 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+Palindrome :
+
+eg: n=123 , rev=321 ==> not palindrome
+eg: n=121 , rev=121 ==> palindrome
+eg: n=1   , rev=1   ==> palindrome
+*/
+
 bool palindrome(int n)
 {
     int rev=0;
