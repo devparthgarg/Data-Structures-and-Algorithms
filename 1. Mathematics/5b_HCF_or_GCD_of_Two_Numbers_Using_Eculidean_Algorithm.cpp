@@ -18,7 +18,7 @@ int EculideanHCF1(int a,int b)//naive
     return a;
 }
 
-int EculideanHCF2(int a,int b)//efficient
+int EculideanHCF2(int a,int b)//efficient time comp. O(log(min(a,b)))
 {
     if(b==0)
     {

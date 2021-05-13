@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int LCM(int a,int b)
+int LCM(int a,int b)//time comp. O(a*b-max(a,b))
 {
     int res=max(a,b);
     while(true)
