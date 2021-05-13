@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int EculideanHCF(int a,int b)
+int EculideanHCF1(int a,int b)//naive
 {
     while(a!=b)
     {
@@ -18,7 +18,7 @@ int EculideanHCF(int a,int b)
     return a;
 }
 
-int EculideanHCFefficent(int a,int b)
+int EculideanHCF2(int a,int b)//efficient
 {
     if(b==0)
     {
@@ -26,8 +26,13 @@ int EculideanHCFefficent(int a,int b)
     }
     else
     {
-        return EculideanHCFefficent(b,a%b);
+        return EculideanHCF2(b,a%b);
     }
+}
+
+int EculideanHCF3(int a,int b)//same as above but in one line
+{
+    return b==0?a:EculideanHCF3(b,a%b);
 }
 
 int main()
@@ -35,7 +40,8 @@ int main()
     int n1,n2;
     cin>>n1>>n2;
 
-    cout<<EculideanHCF(n1,n2)<<endl;
-    cout<<EculideanHCFefficent(n1,n2);    
+    cout<<EculideanHCF1(n1,n2)<<endl;
+    cout<<EculideanHCF2(n1,n2)<<endl;
+    cout<<EculideanHCF3(n1,n2)<<endl;    
     return 0;
 }
