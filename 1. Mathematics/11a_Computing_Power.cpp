@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int power(int n,int p)
+//naive solution
+int power(int n,int p)//time comp. O(p)
 {
     int res=1;
     for(int i=0;i<p;i++)
@@ -11,6 +12,7 @@ int power(int n,int p)
 
     return res;
 }
+
 int main()
 {
     int n,p;
