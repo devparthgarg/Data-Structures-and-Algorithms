@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void print(int n)//time complexity O(n)
+void print(int n)//time complexity O(n) ; space comp. O(n)
 {
     if(n==0)
     {
@@ -18,6 +18,5 @@ int main()
     cin>>n;
 
     print(n);
-    
     return 0;
 }

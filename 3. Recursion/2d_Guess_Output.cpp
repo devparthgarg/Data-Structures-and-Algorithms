@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//converts decimal to binary
 void fun(int n)
 {
     if(n==0)
