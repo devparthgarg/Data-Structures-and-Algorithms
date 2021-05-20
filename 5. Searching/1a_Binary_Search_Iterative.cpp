@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//only applicable on sorted array
+//only applicable for sorted array
 int binarySearch(int a[],int n,int key)//time comp. O(logn)
 {
     int low=0;

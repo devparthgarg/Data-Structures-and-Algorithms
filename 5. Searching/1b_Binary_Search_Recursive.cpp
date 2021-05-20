@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//only applicable for sorted array
 int binarySearch(int a[],int low,int high,int key)//time comp. O(logn) ; space comp. O(logn)
 {
     //base case
