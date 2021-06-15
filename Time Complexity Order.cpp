@@ -11,7 +11,7 @@ int main()
 
 	let f(n) and g(n) be two function such that { f(n),g(n),n >=0 }
 
-	if f(n)/g(n) equals 0 for n->INFINITY then g(n) growing faster than f(n)
+	if f(n)/g(n) equals 0 for n->INFINITY then g(n) is growing faster than f(n)
 	*/
 	return 0;
 }
