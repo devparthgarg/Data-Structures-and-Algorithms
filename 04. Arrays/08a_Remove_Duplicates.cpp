@@ -1,8 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int removeDuplicate(int a[],int n)//time comp. O(nlogn) (because we are sorting the array) , space comp. O(n)
+int removeDuplicate(int a[],int n)//time comp. O(n*logn) (because we are sorting the array) , space comp. O(n)
 {
+    sort(a,a+n);
+
     int temp[n];
     temp[0]=a[0];
     int res=1;
@@ -43,7 +45,6 @@ int main()
     {
         cin>>arr[i];
     }
-    sort(arr,arr+n);
 
     display(arr,n);
     n=removeDuplicate(arr,n);
