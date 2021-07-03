@@ -7,7 +7,7 @@ int main()
     
     Array Advantages :
 
-    1.Continous memory
+    1.Contigous memory
     2.Random access
     3.Cache friendliness
 
