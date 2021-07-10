@@ -4,7 +4,7 @@ using namespace std;
 /*Assumptions :
 1.odd sized arrays
 2.all distinct elements*/
-int median(vector<vector<int>>& v)//time comp. O(n^2)
+int median(vector<vector<int>>& v)//time comp. O(r*c*log(r*c))
 {
 	vector<int> arr;
 
