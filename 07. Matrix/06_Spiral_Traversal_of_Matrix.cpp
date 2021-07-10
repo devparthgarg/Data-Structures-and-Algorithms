@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void spiral(vector<vector<int>> v)
+void spiral(vector<vector<int>> v)//time comp. O(n^2)
 {
 	int startRow = 0;
 	int endRow = v.size() - 1;
