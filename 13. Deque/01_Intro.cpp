@@ -22,7 +22,10 @@ int main()
 	4.max_size()
 	5.empty()
 
-	note: all operations mentioned above are O(1) operations
+	note:
+	1. All operations mentioned above are O(1) operations
+	2. In C++ STL ,Deque allows random access
+		eg: dq[0],dq[3]
 
 	Implementation :
 	1.Linked List (doubly)
