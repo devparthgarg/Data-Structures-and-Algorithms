@@ -8,21 +8,13 @@ int repeatingElement(int a[], int n) //time comp. O(n) ; space comp. O(n)
 	for (int i = 0; i < n; i++)
 	{
 		m[a[i]]++;
-	}
-
-	int e = 0;
-	int cnt = 0;
-
-	for (int i = 0; i < n; i++)
-	{
-		if (cnt < m[a[i]])
+		if (m[a[i]] == 2)
 		{
-			cnt = m[a[i]];
-			e = a[i];
+			return a[i];
 		}
 	}
 
-	return e;
+	return -1;
 }
 
 int main()
