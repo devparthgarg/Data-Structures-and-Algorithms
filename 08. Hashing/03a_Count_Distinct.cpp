@@ -1,26 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int countDistinct(int arr[],int n)//time comp. O(n^2)
+int countDistinct(int arr[], int n) //time comp. O(n^2)
 {
-	int cnt=0;
+	int cnt = 0;
 
-	for(int i=0;i<n;i++)
+	for (int i = 0; i < n; i++)
 	{
-		bool flag=false;
-		for(int j=0;j<i;j++)
+		bool flag = false;
+		for (int j = 0; j < i; j++)
 		{
-			if(arr[i]==arr[j])
+			if (arr[i] == arr[j])
 			{
-				flag=true;
+				flag = true;
 				break;
 			}
 		}
-		if(flag==false)
+		if (flag == false)
 		{
 			cnt++;
 		}
-	}	
+	}
 
 	return cnt;
 }
@@ -28,14 +28,14 @@ int countDistinct(int arr[],int n)//time comp. O(n^2)
 int main()
 {
 	int n;
-	cin>>n;
+	cin >> n;
 
 	int arr[n];
-	for(int i=0;i<n;i++)
+	for (int i = 0; i < n; i++)
 	{
-		cin>>arr[i];
+		cin >> arr[i];
 	}
 
-	cout<<countDistinct(arr,n);
+	cout << countDistinct(arr, n);
 	return 0;
 }

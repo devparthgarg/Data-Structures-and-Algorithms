@@ -7,8 +7,8 @@ int main()
 
 	1.unordered set based on hashing
 
-	2.functions : insert , begin , end , size , clear , find ,count , erase , empty
-	
+	2.functions : insert, begin, end, size, clear, find, count, erase, empty
+
 	3.elements can't be present more than once
 	*/
 
@@ -21,63 +21,63 @@ int main()
 	s.insert(50);
 
 	//printing 1 (elements may not be in sorted manner)
-	for(auto x:s)
+	for (auto x : s)
 	{
-		cout<<x<<" ";
+		cout << x << " ";
 	}
-	cout<<endl;
+	cout << endl;
 
 	//printing 2
-	for(auto it=s.begin();it!=s.end();it++)
+	for (auto it = s.begin(); it != s.end(); it++)
 	{
-		cout<<(*it)<<" ";
+		cout << (*it) << " ";
 	}
-	cout<<endl;
+	cout << endl;
 
 	//find function : returns iterator
-	if(s.find(30)==s.end())
+	if (s.find(30) == s.end())
 	{
-		cout<<"not found"<<endl;
+		cout << "not found" << endl;
 	}
 	else
 	{
-		cout<<"found "<<(*s.find(30))<<endl;
+		cout << "found " << (*s.find(30)) << endl;
 	}
 
 	//count function : returns 0 or 1 , alternative to find function
-	if(s.count(50))
+	if (s.count(50))
 	{
-		cout<<"found"<<endl;
+		cout << "found" << endl;
 	}
 	else
 	{
-		cout<<"not found"<<endl;
+		cout << "not found" << endl;
 	}
 
 	//erase function
 	s.erase(30);
-	if(s.find(30)==s.end())
+	if (s.find(30) == s.end())
 	{
-		cout<<"not found "<<endl;
+		cout << "not found " << endl;
 	}
 	else
 	{
-		cout<<"found "<<(*s.find(30))<<endl;
+		cout << "found " << (*s.find(30)) << endl;
 	}
 
 	//size
-	cout<<s.size()<<endl;
+	cout << s.size() << endl;
 	s.clear(); //alternative s.erase(s.begin(),s.end());
-	cout<<s.size()<<endl;
+	cout << s.size() << endl;
 
 	//empty
-	if(s.empty())
+	if (s.empty())
 	{
-		cout<<"empty set"<<endl;
+		cout << "empty set" << endl;
 	}
 	else
 	{
-		cout<<"not empty"<<endl;
+		cout << "not empty" << endl;
 	}
 
 	return 0;
