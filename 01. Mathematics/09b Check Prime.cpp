@@ -2,9 +2,9 @@
 using namespace std;
 
 /*
-Fact :
-any prime no. except 2 and 3 can be written
-in form of (6n+1) or (6n-1)
+Prime Number :
+A prime number is a whole number greater than 1
+whose only factors are 1 and itself.
 */
 
 /*
@@ -16,16 +16,17 @@ x*x <= n
 x <= sqrt(n)
 */
 
+//Efficient Solution
 bool isPrime(int n)//time comp. O(sqrt(n))
 {
-    if(n==1)
+    if (n == 1)
     {
         return false;
     }
 
-    for(int i=2;i*i<=n;i++)
+    for (int i = 2; i * i <= n; i++)
     {
-        if(n%i==0)
+        if (n % i == 0)
         {
             return false;
         }
@@ -37,8 +38,8 @@ bool isPrime(int n)//time comp. O(sqrt(n))
 int main()
 {
     int n;
-    cin>>n;
+    cin >> n;
 
-    cout<<isPrime(n);   
+    cout << isPrime(n) << endl;
     return 0;
 }
