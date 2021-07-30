@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-    int n=5,k=3;
+    int n = 5, k = 3;
 
-    int mask=n>>(k-1);
+    int mask = n >> (k - 1);
 
     /*
     explaination :
@@ -14,13 +14,13 @@ int main()
     take and of 1 with mask , 1 if bit is set else 0
     */
 
-    if(mask&1)
+    if (mask & 1)
     {
-        cout<<"Yes";
+        cout << "Yes";
     }
     else
     {
-        cout<<"No";
+        cout << "No";
     }
 
     return 0;
