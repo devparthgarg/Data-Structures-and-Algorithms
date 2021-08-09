@@ -9,8 +9,8 @@ public:
 
 	node(int d)
 	{
-		data=d;
-		next=NULL;
+		data = d;
+		next = NULL;
 	}
 };
 
