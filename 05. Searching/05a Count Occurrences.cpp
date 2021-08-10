@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int countOcc(int a[], int n, int key) //time comp. O(n)
+int countOcc(int a[], int n, int key) //time comp. O(n) ; space comp. O(1)
 {
 	int cnt = 0;
 	for (int i = 0; i < n; i++)
@@ -17,17 +17,9 @@ int countOcc(int a[], int n, int key) //time comp. O(n)
 
 int main()
 {
-	int n;
-	cin >> n;
-
-	int a[n];
-	for (int i = 0; i < n; i++)
-	{
-		cin >> a[i];
-	}
-
-	int key;
-	cin >> key;
+	int a[] = {10, 20, 30, 30, 30, 30, 40, 50, 60};
+	int n = sizeof(a) / sizeof(int);
+	int key = 30;
 
 	cout << countOcc(a, n, key);
 	return 0;

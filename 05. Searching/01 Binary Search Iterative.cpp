@@ -1,27 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//only applicable for sorted array
-int binarySearch(int a[],int n,int key)//time comp. O(logn)
+//for sorted arrays only
+int binarySearch(int a[], int n, int key) //time comp. O(logn) ; space comp. O(1)
 {
-    int low=0;
-    int high=n-1;
+    int low = 0;
+    int high = n - 1;
 
-    while(low<=high)
+    while (low <= high)
     {
-        int mid=(low+high)/2;
+        int mid = (low + high) / 2;
 
-        if(a[mid]==key)
+        if (a[mid] == key)
         {
             return mid;
         }
-        else if(a[mid]>key)
+        else if (a[mid] > key)
         {
-            high=mid-1;
+            high = mid - 1;
         }
         else
         {
-            low=mid+1;
+            low = mid + 1;
         }
     }
 
@@ -30,18 +30,10 @@ int binarySearch(int a[],int n,int key)//time comp. O(logn)
 
 int main()
 {
-    int n;
-    cin>>n;
+    int a[] = {10, 20, 30, 40, 50, 60};
+    int n = sizeof(a) / sizeof(int);
+    int key = 50;
 
-    int a[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>a[i];
-    }
-
-    int key;
-    cin>>key;
-
-    cout<<binarySearch(a,n,key);
+    cout << binarySearch(a, n, key);
     return 0;
 }

@@ -38,14 +38,8 @@ int count1s(int a[], int n) //time comp. O(logn)
 
 int main()
 {
-	int n;
-	cin >> n;
-
-	int a[n];
-	for (int i = 0; i < n; i++)
-	{
-		cin >> a[i];
-	}
+	int a[] = {0, 0, 0, 0, 1, 1, 1};
+	int n = sizeof(a) / sizeof(int);
 
 	cout << count1s(a, n);
 	return 0;

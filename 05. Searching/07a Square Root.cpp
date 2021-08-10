@@ -1,23 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int sqRoot(int n)//time comp. O(sqrt(n))
+int sqRoot(int n)//time comp. O(sqrt(n)) ; space comp. O(1)
 {
-	int i=1;
+	int i = 1;
 
-	while(i*i<=n)
+	while (i * i <= n)
 	{
 		i++;
 	}
 
-	return (i-1);
+	return (i - 1);
 }
 
 int main()
 {
-	int n;
-	cin>>n;
+	int n = 225;
 
-	cout<<sqRoot(n);
+	cout << sqRoot(n);
 	return 0;
 }

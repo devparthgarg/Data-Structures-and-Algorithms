@@ -4,20 +4,20 @@ using namespace std;
 /*
 suppose original sorted array is : 1 2 3 5 8
 
-now rotate it (any number of times clockwise or anticlockwise) 
-eg: 2 3 5 8 1 
+now rotate it (any number of times clockwise or anticlockwise)
+eg: 2 3 5 8 1
 
-so above array is sorted rotated array 
+so above array is sorted rotated array
 
-we need to search in this kind of array 
+we need to search in this kind of array
 */
 
-//naive solution (simple linear search)
-int searchRotated(int a[],int n,int key)//time comp. O(n)
+//Naive Method (linear search)
+int searchRotated(int a[], int n, int key) //time comp. O(n) ; space comp. O(1)
 {
-	for(int i=0;i<n;i++)
+	for (int i = 0; i < n; i++)
 	{
-		if(a[i]==key)
+		if (a[i] == key)
 		{
 			return i;
 		}
@@ -28,18 +28,10 @@ int searchRotated(int a[],int n,int key)//time comp. O(n)
 
 int main()
 {
-	int n;
-	cin>>n;
+	int a[] = {10, 20, 30, 40, 50, 8, 9};
+	int n = sizeof(a) / sizeof(int);
+	int key = 30;
 
-	int a[n];
-	for(int i=0;i<n;i++)
-	{
-		cin>>a[i];
-	}
-
-	int key;
-	cin>>key;
-
-	cout<<searchRotated(a,n,key);
+	cout << searchRotated(a, n, key);
 	return 0;
 }

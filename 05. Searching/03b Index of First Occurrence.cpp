@@ -1,52 +1,46 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//recursive method
-int firstOcc(int a[],int l,int h,int key)//time comp. O(logn) ; space comp. O(logn)
+//Iterative Method using Binary Search
+int firstOcc(int a[], int n, int key) //time comp. O(logn) ; space comp. O(1)
 {
-    //base case
-    if(l>h)
-    {
-        return -1;
-    }
+    int low = 0;
+    int high = n - 1;
 
-    //recursive case
-    int mid=(l+h)/2;
-    if(a[mid]>key)
+    while (low <= high)
     {
-        return firstOcc(a,l,mid-1,key);
-    }
-    else if(a[mid]<key)
-    {
-        return firstOcc(a,mid+1,h,key);
-    }
-    else
-    {
-        if(mid==0 or a[mid-1]!=a[mid])
+        int mid = (low + high) / 2;
+
+        if (a[mid] > key)
         {
-            return mid;
+            high = mid - 1;
+        }
+        else if (a[mid] < key)
+        {
+            low = mid + 1;
         }
         else
         {
-            return firstOcc(a,l,mid-1,key);
+            if (mid == 0 or a[mid - 1] != a[mid])
+            {
+                return mid;
+            }
+            else
+            {
+                high = mid - 1;
+            }
         }
     }
+
+    return -1;
 }
 
 int main()
 {
-    int n;
-    cin>>n;
+    int a[] = {10, 20, 30, 30, 30, 30, 40, 50, 60};
+    int n = sizeof(a) / sizeof(int);
+    int key = 30;
 
-    int a[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>a[i];
-    }
-
-    int key;
-    cin>>key;
-
-    cout<<firstOcc(a,0,n-1,key);
+    cout << firstOcc(a, n, key);
     return 0;
 }
