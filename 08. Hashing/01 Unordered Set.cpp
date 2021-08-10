@@ -6,28 +6,31 @@ int main()
 	properties :
 
 	1.unordered set based on hashing
-
 	2.functions : insert, begin, end, size, clear, find, count, erase, empty
-
 	3.elements can't be present more than once
+	4.all operations O(1) on average
+
+	syntax:
+	unordered_set<data_type> name;
 	*/
 
 	unordered_set<int> s;
 
+	//inserting elements
 	s.insert(10);
 	s.insert(20);
 	s.insert(30);
 	s.insert(40);
 	s.insert(50);
 
-	//printing 1 (elements may not be in sorted manner)
+	//iterating method 1 (elements may not be in sorted manner)
 	for (auto x : s)
 	{
 		cout << x << " ";
 	}
 	cout << endl;
 
-	//printing 2
+	//iterating method 2
 	for (auto it = s.begin(); it != s.end(); it++)
 	{
 		cout << (*it) << " ";

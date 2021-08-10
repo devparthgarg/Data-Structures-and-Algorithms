@@ -1,7 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//returns count of elements which are same in both
+/*
+Problem :
+return count of elements which are common
+in both arrays
+*/
+
 int intersection(int a[], int b[], int m, int n) //time comp. O(max(m,n)) ; space comp. O(m+n)
 {
 	unordered_set<int> sa(a, a + m);

@@ -21,14 +21,8 @@ int countDistinct_Oneliner(int arr[], int n) //above implementation made short
 
 int main()
 {
-	int n;
-	cin >> n;
-
-	int arr[n];
-	for (int i = 0; i < n; i++)
-	{
-		cin >> arr[i];
-	}
+	int arr[] = {15, 12, 13, 12, 13, 13, 18};
+	int n = sizeof(arr) / sizeof(int);
 
 	cout << countDistinct(arr, n) << endl;
 	return 0;
