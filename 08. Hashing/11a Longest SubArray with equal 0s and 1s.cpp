@@ -1,8 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//subarray means contigous elements
-int longest01(int a[], int n) //time comp. O(n^2)
+int longest01(int a[], int n) //time comp. O(n^2) ; space comp. O(1)
 {
 	int res = 0;
 
@@ -32,14 +31,8 @@ int longest01(int a[], int n) //time comp. O(n^2)
 
 int main()
 {
-	int n;
-	cin >> n;
-
-	int arr[n];
-	for (int i = 0; i < n; i++)
-	{
-		cin >> arr[i];
-	}
+	int arr[] = {1, 0, 1, 1, 1, 0, 0};
+	int n = sizeof(arr) / sizeof(int);
 
 	cout << longest01(arr, n);
 	return 0;
