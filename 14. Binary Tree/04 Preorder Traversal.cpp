@@ -10,31 +10,31 @@ public:
 
 	node(int d)
 	{
-		data=d;
-		left=NULL;
-		right=NULL;
+		data = d;
+		left = NULL;
+		right = NULL;
 	}
 };
 
 void preorder(node *root)//root left right
 {
-	if(root==NULL)
+	if (root == NULL)
 	{
 		return ;
 	}
 
-	cout<<root->data<<" ";
+	cout << root->data << " ";
 	preorder(root->left);
 	preorder(root->right);
 }
 
 int main()
 {
-	node *root=new node(10);
+	node *root = new node(10);
 
-	root->left=new node(20);
-	root->right=new node(30);
-	root->left->left=new node(40);
+	root->left = new node(20);
+	root->right = new node(30);
+	root->left->left = new node(40);
 
 	preorder(root);
 	return 0;

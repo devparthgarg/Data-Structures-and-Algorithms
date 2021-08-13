@@ -10,15 +10,15 @@ public:
 
 	node(int d)
 	{
-		data=d;
-		left=NULL;
-		right=NULL;
+		data = d;
+		left = NULL;
+		right = NULL;
 	}
 };
 
 void levelOrder(node *root)//time comp. O(n) ; space comp. O(n)
 {
-	if(root==NULL)
+	if (root == NULL)
 	{
 		return ;
 	}
@@ -26,18 +26,18 @@ void levelOrder(node *root)//time comp. O(n) ; space comp. O(n)
 	queue<node*> q;
 	q.push(root);
 
-	while(q.empty()==false)
+	while (q.empty() == false)
 	{
-		node *curr=q.front();
+		node *curr = q.front();
 		q.pop();
 
-		cout<<curr->data<<" ";
-		
-		if(curr->left!=NULL)
+		cout << curr->data << " ";
+
+		if (curr->left != NULL)
 		{
 			q.push(curr->left);
 		}
-		if(curr->right!=NULL)
+		if (curr->right != NULL)
 		{
 			q.push(curr->right);
 		}
@@ -46,11 +46,11 @@ void levelOrder(node *root)//time comp. O(n) ; space comp. O(n)
 
 int main()
 {
-	node *root=new node(10);
+	node *root = new node(10);
 
-	root->left=new node(20);
-	root->right=new node(30);
-	root->left->left=new node(40);
+	root->left = new node(20);
+	root->right = new node(30);
+	root->left->left = new node(40);
 
 	levelOrder(root);
 	return 0;

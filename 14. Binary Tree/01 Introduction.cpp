@@ -10,14 +10,14 @@ public:
 
 	node(int d)
 	{
-		data=d;
-		left=NULL;
-		right=NULL;
+		data = d;
+		left = NULL;
+		right = NULL;
 	}
 };
 
 /*
-			Tree made here is :
+			Tree constructed here is :
 
 					10
 					/\
@@ -27,16 +27,16 @@ public:
 				 /\
 				N  N
 
-			N : Null 
+			N : Null
 */
 
 int main()
 {
-	node *root=new node(10);
+	node *root = new node(10);
 
-	root->left=new node(20);
-	root->right=new node(30);
-	root->left->left=new node(40);
+	root->left = new node(20);
+	root->right = new node(30);
+	root->left->left = new node(40);
 
 	return 0;
 }
