@@ -1,8 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//subarray means contigous elements
-bool isSum(int a[], int n, int sum) //time comp. O(n^2)
+bool isSum(int a[], int n, int sum) //time comp. O(n^2) ; space comp. O(1)
 {
 	for (int i = 0; i < n; i++)
 	{

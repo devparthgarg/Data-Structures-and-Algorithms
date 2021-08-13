@@ -1,9 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//subarray means contigous elements
-
-//trick : using prefix sum and hashing
+//trick : using prefix sum + hashing
 bool isZero(int a[], int n) //time comp. O(n) ; space comp. O(n)
 {
 	unordered_set<int> s;
