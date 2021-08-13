@@ -11,10 +11,8 @@ bool pairSum(int a[], int n, int sum) //time comp. O(n) ; space comp. O(n)
 		{
 			return true;
 		}
-		else
-		{
-			m.insert(a[i]);
-		}
+
+		m.insert(a[i]);
 	}
 
 	return false;
@@ -22,17 +20,9 @@ bool pairSum(int a[], int n, int sum) //time comp. O(n) ; space comp. O(n)
 
 int main()
 {
-	int n;
-	cin >> n;
-
-	int arr[n];
-	for (int i = 0; i < n; i++)
-	{
-		cin >> arr[i];
-	}
-
-	int sum;
-	cin >> sum;
+	int arr[] = {3, 2, 8, 15, -8};
+	int n = sizeof(arr) / sizeof(n);
+	int sum = 17;
 
 	cout << pairSum(arr, n, sum);
 	return 0;

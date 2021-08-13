@@ -2,33 +2,33 @@
 using namespace std;
 
 //returns count of elements which are same in both
-int intersection(int a[],int b[],int m,int n)//time comp. O(m*(m+n))
+int intersection(int a[], int b[], int m, int n) //time comp. O(m*(m+n)) ; space comp. O(1)
 {
-	int cnt=0;
+	int cnt = 0;
 
-	for(int i=0;i<m;i++)
+	for (int i = 0; i < m; i++)
 	{
 		//check if seen before
-		bool flag=false;
+		bool flag = false;
 
-		for(int j=0;j<i;j++)
+		for (int j = 0; j < i; j++)
 		{
-			if(a[i]==a[j])
+			if (a[i] == a[j])
 			{
-				flag=true;
+				flag = true;
 				break;
 			}
 		}
 
-		if(flag==true)
+		if (flag == true)
 		{
 			continue;
 		}
 
 		//if not seen before check if present in other array
-		for(int j=0;j<n;j++)
+		for (int j = 0; j < n; j++)
 		{
-			if(a[i]==b[j])
+			if (a[i] == b[j])
 			{
 				cnt++;
 				break;
@@ -41,22 +41,12 @@ int intersection(int a[],int b[],int m,int n)//time comp. O(m*(m+n))
 
 int main()
 {
-	int m,n;
-	cin>>m>>n;
+	int a[] = {10, 15, 20, 5, 30};
+	int b[] = {30, 5, 30, 80};
 
-	int a[m];
-	int b[n];
+	int m = sizeof(a) / sizeof(int);
+	int n = sizeof(b) / sizeof(int);
 
-	for(int i=0;i<m;i++)
-	{
-		cin>>a[i];
-	}
-
-	for(int i=0;i<n;i++)
-	{
-		cin>>b[i];
-	}
-
-	cout<<intersection(a,b,m,n);
+	cout << intersection(a, b, m, n);
 	return 0;
 }

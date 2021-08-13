@@ -1,14 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int countDistinct(int arr[], int n) //time comp. O(n^2)
+int countDistinct(int arr[], int n) //time comp. O(n^2) ; space comp. O(1)
 {
 	int cnt = 0;
 
 	for (int i = 0; i < n; i++)
 	{
 		bool flag = false;
-		for (int j = i + 1; j < n; j++)
+		for (int j = 0; j < i; j++)
 		{
 			if (arr[i] == arr[j])
 			{

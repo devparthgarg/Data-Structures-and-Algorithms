@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int unionArray(int a[], int b[], int m, int n) //time comp. O(n) ; space comp. O(max(a,b))
+int unionArray(int a[], int b[], int m, int n) //time comp. O(n) ; space comp. O(a+b)
 {
 	unordered_set<int> s(a, a + m);
 
@@ -15,21 +15,11 @@ int unionArray(int a[], int b[], int m, int n) //time comp. O(n) ; space comp. O
 
 int main()
 {
-	int m, n;
-	cin >> m >> n;
+	int a[] = {15, 20, 5, 15};
+	int b[] = {15, 15, 15, 20, 10};
 
-	int a[m];
-	int b[n];
-
-	for (int i = 0; i < m; i++)
-	{
-		cin >> a[i];
-	}
-
-	for (int i = 0; i < n; i++)
-	{
-		cin >> b[i];
-	}
+	int m = sizeof(a) / sizeof(int);
+	int n = sizeof(b) / sizeof(int);
 
 	cout << unionArray(a, b, m, n);
 	return 0;

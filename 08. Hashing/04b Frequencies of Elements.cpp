@@ -18,14 +18,8 @@ void frequencies(int arr[], int n) //time comp. O(n) ; space comp. O(n)
 
 int main()
 {
-	int n;
-	cin >> n;
-
-	int arr[n];
-	for (int i = 0; i < n; i++)
-	{
-		cin >> arr[i];
-	}
+	int arr[] = {10, 12, 10, 15, 10, 20, 12, 12};
+	int n = sizeof(arr) / sizeof(int);
 
 	frequencies(arr, n);
 	return 0;

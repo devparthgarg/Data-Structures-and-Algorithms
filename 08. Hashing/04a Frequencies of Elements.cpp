@@ -1,49 +1,44 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void frequencies(int arr[],int n)//time comp. O(n^2)
+void frequencies(int arr[], int n) //time comp. O(n^2) ; space comp. O(1)
 {
-	for(int i=0;i<n;i++)
+	for (int i = 0; i < n; i++)
 	{
 		//check if seen before
-		bool flag=false;
-		for(int j=0;j<i;j++)
+		bool flag = false;
+		for (int j = 0; j < i; j++)
 		{
-			if(arr[i]==arr[j])
+			if (arr[i] == arr[j])
 			{
-				flag=true;
+				flag = true;
 				break;
 			}
 		}
-		if(flag==true)
+
+		if (flag)
 		{
 			continue;
 		}
 
-		//if not seen print frequency
-		int freq=1;
-		for(int j=i+1;j<n;j++)
+		//if not seen before, count frequencies
+		int cnt = 1;
+		for (int j = i + 1; j < n; j++)
 		{
-			if(arr[i]==arr[j])
+			if (arr[i] == arr[j])
 			{
-				freq++;
+				cnt++;
 			}
 		}
-		cout<<arr[i]<<" "<<freq<<endl;
+		cout << arr[i] << " " << cnt << endl;
 	}
 }
 
 int main()
 {
-	int n;
-	cin>>n;
+	int arr[] = {10, 12, 10, 15, 10, 20, 12, 12};
+	int n = sizeof(arr) / sizeof(int);
 
-	int arr[n];
-	for(int i=0;i<n;i++)
-	{
-		cin>>arr[i];
-	}
-
-	frequencies(arr,n);
+	frequencies(arr, n);
 	return 0;
 }
