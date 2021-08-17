@@ -16,8 +16,7 @@ public:
 	}
 };
 
-//Breadth First Search (BFS)
-void levelOrder(node *root)//time comp. O(n) ; space comp. O(n)
+void levelOrderLineByLine(node *root)//time comp. O(n) ; space comp. O(n)
 {
 	if (root == NULL)
 	{
@@ -29,30 +28,34 @@ void levelOrder(node *root)//time comp. O(n) ; space comp. O(n)
 
 	while (!q.empty())
 	{
-		node *curr = q.front();
-		q.pop();
+		int cnt = q.size();
 
-		cout << curr->data << " ";
+		for (int i = 0; i < cnt; i++)
+		{
+			node *curr = q.front();
+			q.pop();
+			cout << curr->data << " ";
 
-		if (curr->left != NULL)
-		{
-			q.push(curr->left);
+			if (curr->left != NULL)
+			{
+				q.push(curr->left);
+			}
+			if (curr->right != NULL)
+			{
+				q.push(curr->right);
+			}
 		}
-		if (curr->right != NULL)
-		{
-			q.push(curr->right);
-		}
+		cout << endl;
 	}
 }
 
 int main()
 {
 	node *root = new node(10);
-
 	root->left = new node(20);
 	root->right = new node(30);
 	root->left->left = new node(40);
 
-	levelOrder(root);
+	levelOrderLineByLine(root);
 	return 0;
 }

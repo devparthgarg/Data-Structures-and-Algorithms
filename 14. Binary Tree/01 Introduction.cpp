@@ -16,20 +16,6 @@ public:
 	}
 };
 
-/*
-			Tree constructed here is :
-
-					10
-					/\
-				  20  30
-				  /\  /\
-				 40	N N N
-				 /\
-				N  N
-
-			N : Null
-*/
-
 int main()
 {
 	node *root = new node(10);

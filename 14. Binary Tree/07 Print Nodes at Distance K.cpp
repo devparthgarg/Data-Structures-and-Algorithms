@@ -42,6 +42,6 @@ int main()
 	root->right = new node(30);
 	root->left->left = new node(40);
 
-	nodeAtDistanceK(root, 0);
+	nodeAtDistanceK(root, 1);
 	return 0;
 }
