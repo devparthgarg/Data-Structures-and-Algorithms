@@ -25,7 +25,7 @@ bool isPrime(int n)//time comp. O(sqrt(n))
 
     for (int i = 5; i * i <= n; i = i + 6)
     {
-        if (n * i == 0 or n * (i + 2) == 0)
+        if (n % i == 0 or n % (i + 2) == 0)
         {
             return false;
         }
