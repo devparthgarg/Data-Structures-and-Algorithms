@@ -1,7 +1,7 @@
 # Data-Structures-and-Algorithms
 A repository which contains DSA Questions from Basic to Advanced . Contents :
 1) Mathematics ✅
-2) Bit Magic     	
+2) Bit Magic ✅	
 3) Recursion  	
 4) Arrays     	
 5) Searching     	
