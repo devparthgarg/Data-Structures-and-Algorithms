@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//recursive solution
 int power(int x, int n)//time comp. O(logn) ; space comp. O(logn)
 {
 	if (n == 0)
