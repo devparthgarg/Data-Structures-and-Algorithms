@@ -1,30 +1,38 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Naive Solution - causes overflow
-int countZeroes(int n)//time comp. O(n)
+int factorial(int n)
 {
-    int fact = 1;
-    for (int i = n; i >= 1; i--)
-    {
-        fact = fact * i;
-    }
+	int res = 1;
+	for (int i = 2; i <= n; i++)
+	{
+		res = res * i;
+	}
 
-    int res = 0;
-    while (fact % 10 == 0)
-    {
-        fact = fact / 10;
-        res++;
-    }
+	return res;
+}
 
-    return res;
+//not suitable for large factorials
+int trailingZeros(int n)//time comp. O(n)
+{
+	//1.calculate factorial
+	int fact = factorial(n);
+
+	//2.count zeroes in factorial
+	int cnt = 0;
+	while (fact % 10 == 0)
+	{
+		fact = fact / 10;
+		cnt++;
+	}
+
+	return cnt;
 }
 
 int main()
 {
-    int n;
-    cin >> n;
+	int n = 10;
 
-    cout << countZeroes(n) << endl;
-    return 0;
+	cout << trailingZeros(n);
+	return 0;
 }

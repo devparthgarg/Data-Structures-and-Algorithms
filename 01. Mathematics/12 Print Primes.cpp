@@ -1,46 +1,54 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*
-Print primes less than equals to n
-*/
-
-bool isPrime(int n)
+bool isPrime(int n)//time comp. O(sqrt(n))
 {
-    if (n == 1)
-    {
-        return false;
-    }
+	if (n <= 1)
+	{
+		return false;
+	}
 
-    for (int i = 2; i < n; i++)
-    {
-        if (n % i == 0)
-        {
-            return false;
-        }
-    }
+	if (n == 2 or n == 3)
+	{
+		return true;
+	}
 
-    return true;
+	if (n % 2 == 0 or n % 3 == 0)
+	{
+		return false;
+	}
+
+	for (int i = 5; i * i <= n; i = i + 6)
+	{
+		if (n % i == 0 or n % (i + 2) == 0)
+		{
+			return false;
+		}
+	}
+
+	return true;
 }
 
-void printPrimes(int n)//time comp. O(n*n)
+void printPrimes(int n)//time comp. O(n*sqrt(n))
 {
-    for (int i = 2; i <= n; i++)
-    {
-        if (isPrime(i))
-        {
-            cout << i << " ";
-        }
-    }
-
-    return ;
+	for (int i = 2; i <= n; i++)
+	{
+		if (isPrime(i))
+		{
+			cout << i << " ";
+		}
+	}
 }
 
 int main()
 {
-    int n;
-    cin >> n;
+	int n1 = 10, n2 = 100;
 
-    printPrimes(n);
-    return 0;
+	printPrimes(n1);
+	cout << endl;
+
+	printPrimes(n2);
+	cout << endl;
+
+	return 0;
 }

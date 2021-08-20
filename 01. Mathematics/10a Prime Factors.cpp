@@ -1,60 +1,59 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*
-Prime Factors :
-Set of prime numbers which when together
-multiplied form the original number
-eg: n=12 ; output : 2 2 3
-eg: n=13 : output : 13
-*/
-
-bool isPrime(int n)
+bool isPrime(int n)//time comp. O(sqrt(n))
 {
-    if (n == 1)
-    {
-        return false;
-    }
+	if (n <= 1)
+	{
+		return false;
+	}
 
-    for (int i = 2; i < n; i++)
-    {
-        if (n % i == 0)
-        {
-            return false;
-        }
-    }
+	if (n == 2 or n == 3)
+	{
+		return true;
+	}
 
-    return true;
+	if (n % 2 == 0 or n % 3 == 0)
+	{
+		return false;
+	}
+
+	for (int i = 5; i * i <= n; i = i + 6)
+	{
+		if (n % i == 0 or n % (i + 2) == 0)
+		{
+			return false;
+		}
+	}
+
+	return true;
 }
 
-//Naive Solution
-void primeFactors(int n)//time comp. : O(n*n*logn)
+void primeFactors(int n)//time comp. O(n*sqrt(n)*logn)
 {
-    if (isPrime(n))
-    {
-        cout << n << endl;
-        return ;
-    }
-
-    for (int i = 2; i < n; i++)
-    {
-        if (isPrime(i))
-        {
-            int x = i;
-            while (n % x == 0)
-            {
-                cout << i << " ";
-                x = x * i;
-            }
-        }
-    }
+	for (int i = 2; i < n; i++)
+	{
+		if (isPrime(i))
+		{
+			int x = i;
+			while (n % x == 0)
+			{
+				cout << i << " ";
+				x = x * i;
+			}
+		}
+	}
 }
 
 int main()
 {
-    int n;
-    cin >> n;
+	int n1 = 12, n2 = 18;
 
-    primeFactors(n);
-    return 0;
+	primeFactors(n1);
+	cout << endl;
+
+	primeFactors(n2);
+	cout << endl;
+
+	return 0;
 }

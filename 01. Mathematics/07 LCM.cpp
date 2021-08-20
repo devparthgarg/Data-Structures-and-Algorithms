@@ -1,36 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*
-LCM :
-Smallest number along all common multiples
-eg: a=2,b=5 ; output : 10
-eg: a=3,b=7 ; output : 21
-*/
-
-int LCM(int a, int b)//time comp. O(a*b)
+int lcm(int a, int b)//time comp. O(a*b)
 {
-    int res = max(a, b);
-    while (true)
-    {
-        if (res % a == 0 and res % b == 0)
-        {
-            return res;
-        }
-        else
-        {
-            res++;
-        }
-    }
+	int res = max(a, b);
 
-    return res;
+	while (true)
+	{
+		if (res % a == 0 and res % b == 0)
+		{
+			break;
+		}
+
+		res++;
+	}
+
+	return res;
 }
 
 int main()
 {
-    int n1, n2;
-    cin >> n1 >> n2;
+	int a1 = 7, b1 = 11;
+	int a2 = 2, b2 = 8;
 
-    cout << LCM(n1, n2) << endl;
-    return 0;
+	cout << lcm(a1, b1) << endl;
+	cout << lcm(a2, b2) << endl;
+	return 0;
 }

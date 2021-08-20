@@ -1,21 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int hcf(int a, int b)//time comp. O(min(a,b))
+int hcf(int a, int b)//time comp. O(log(min(a,b)))
 {
-	int res = min(a, b);
-
-	while (res >= 1)
+	while (a != b)
 	{
-		if (a % res == 0 and b % res == 0)
+		if (a > b)
 		{
-			return res;
+			a = a - b;
 		}
-
-		res--;
+		else
+		{
+			b = b - a;
+		}
 	}
 
-	return res;
+	return a;
 }
 
 int main()

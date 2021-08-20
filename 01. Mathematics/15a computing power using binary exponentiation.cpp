@@ -1,13 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//not suitable for large values of x and n
-int power(int x, int n)//time comp. O(n)
+int power(int x, int n)//time comp. O(logn)
 {
 	int res = 1;
-	for (int i = 0; i < n; i++)
+
+	while (n)
 	{
-		res = res * x;
+		if (n % 2 != 0)
+		{
+			res = res * x;
+		}
+		x = x * x;
+		n = n / 2;
 	}
 
 	return res;

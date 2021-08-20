@@ -1,32 +1,31 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Efficient Method
-int power(int n, int p) //time comp. O(logp)
+//recursive solution
+int power(int x, int n)//time comp. O(logn) ; space comp. O(logn)
 {
-	if (p == 0)
+	if (n == 0)
 	{
 		return 1;
 	}
 
-	int temp = power(n, p / 2);
+	int temp = power(x, n / 2);
 	temp = temp * temp;
 
-	if (p % 2 == 0)
+	if (n % 2 == 0)
 	{
 		return temp;
 	}
 	else
 	{
-		return temp * n;
+		return temp * x;
 	}
 }
 
 int main()
 {
-	int n, p;
-	cin >> n >> p;
+	int x = 2, n = 3;
 
-	cout << power(n, p);
+	cout << power(x, n);
 	return 0;
 }

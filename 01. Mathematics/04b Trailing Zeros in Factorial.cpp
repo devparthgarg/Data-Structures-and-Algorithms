@@ -1,24 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Efficient Solution - count number of times 5 occurs
-int countZeroes(int n)//time comp. O(logn)
+int trailingZeros(int n)//time comp. O(logn)
 {
-    int cnt = 0;
+	int cnt = 0;
+	int p = 5;
 
-    for (int i = 5; i <= n; i = i * 5)
-    {
-        cnt = cnt + n / i;
-    }
+	while (n / p)
+	{
+		cnt += n / p;
+		p = p * 5;
+	}
 
-    return cnt;
+	return cnt;
 }
 
 int main()
 {
-    int n;
-    cin >> n;
+	int n = 100;
 
-    cout << countZeroes(n) << endl;
-    return 0;
+	cout << trailingZeros(n);
+	return 0;
 }
