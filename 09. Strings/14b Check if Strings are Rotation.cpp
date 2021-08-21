@@ -12,7 +12,7 @@ bool isRotated(string s1, string s2)//time comp. O(n) ; space comp. O(m+n)
 		return false;
 	}
 
-	string temp = s1 + s2;
+	string temp = s1 + s1;
 
 	return temp.find(s2) != string::npos;
 }
