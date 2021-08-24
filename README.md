@@ -9,8 +9,8 @@ git clone https://github.com/whoparthgarg/Data-Structures-and-Algorithms.git
 ```
 
 ## Contents:
-1) Mathematics ✅
-2) Bit Magic ✅	
+1) Mathematics 
+2) Bit Magic	
 3) Recursion  	
 4) Arrays     	
 5) Searching     	
