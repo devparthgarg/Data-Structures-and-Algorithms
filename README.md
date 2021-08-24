@@ -1,5 +1,14 @@
 # Data-Structures-and-Algorithms
-A repository which contains DSA Questions from Basic to Advanced . Contents :
+<center><img src="assets/logo.png" alt="logo"></center>
+A repository which contains DSA questions from basic to advanced for interview preparation.
+
+## Setting up and running the project
+Fork the repo and clone it.
+```
+git clone https://github.com/whoparthgarg/Data-Structures-and-Algorithms.git
+```
+
+## Contents:
 1) Mathematics ✅
 2) Bit Magic ✅	
 3) Recursion  	
