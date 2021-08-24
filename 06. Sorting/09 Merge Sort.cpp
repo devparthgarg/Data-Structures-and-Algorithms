@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void merge(int a[], int low, int mid, int high) //time comp. O(n) ; space comp. O(n)
+void merge(int a[], int low, int mid, int high)
 {
 	int n1 = mid - low + 1;
 	int n2 = high - mid;
@@ -52,20 +52,35 @@ void merge(int a[], int low, int mid, int high) //time comp. O(n) ; space comp. 
 	}
 }
 
+void mergeSort(int a[], int low, int high) //time comp. O(n*logn) ; space comp. O(n) ; stable algorithm
+{
+	if (low < high) //at least two elements show be there
+	{
+		//divide
+		int mid = low + (high - low) / 2; //same as (low+high)/2 (to avoid overflow (high-low) is done)
+
+		//sorting
+		mergeSort(a, low, mid);
+		mergeSort(a, mid + 1, high);
+
+		//merging
+		merge(a, low, mid, high);
+	}
+}
+
 int main()
 {
-	int a[] = {1, 3, 5, 7, 2, 4, 6};
+	int a[] = {3, 2, 4, 1, 5};
 	int n = sizeof(a) / sizeof(int);
 
 	int low = 0;
-	int high = (n - 1);
-	int mid = (low + high) / 2;
+	int high = n - 1;
 
-	merge(a, low, mid, high);
+	mergeSort(a, low, high);
 
-	for (int i = 0; i < n; i++)
+	for (int x : a)
 	{
-		cout << a[i] << " ";
+		cout << x << " ";
 	}
 	return 0;
 }

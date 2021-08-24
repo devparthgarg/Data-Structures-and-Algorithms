@@ -15,22 +15,23 @@ void bubbleSort(int a[], int n) //time comp. O(n^2) ; space comp. O(1) ; stable 
 	}
 }
 
-int main()
+void display(int a[], int n)
 {
-	int n;
-	cin >> n;
-
-	int a[n];
-	for (int i = 0; i < n; i++)
-	{
-		cin >> a[i];
-	}
-
-	bubbleSort(a, n);
-
 	for (int i = 0; i < n; i++)
 	{
 		cout << a[i] << " ";
 	}
+	cout << endl;
+}
+
+int main()
+{
+	int a[] = {3, 2, 4, 1, 5};
+	int n = sizeof(a) / sizeof(int);
+
+	display(a, n);
+	bubbleSort(a, n);
+	display(a, n);
+
 	return 0;
 }

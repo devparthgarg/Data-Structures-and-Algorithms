@@ -1,29 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void intersection(int a[],int b[],int m,int n)//time comp. O(m+n) ; space comp. O(1)
+void intersection(int a[], int b[], int m, int n) //time comp. O(m+n) ; space comp. O(1)
 {
-	int i=0,j=0;
+	int i = 0, j = 0;
 
-	while(i<m and j<n)
+	while (i < m and j < n)
 	{
-		if(i>0 and a[i]==a[i-1])
+		if (i > 0 and a[i] == a[i - 1])
 		{
 			i++;
 			continue;
 		}
 
-		if(a[i]<b[j])
+		if (a[i] < b[j])
 		{
 			i++;
 		}
-		else if(a[i]>b[j])
+		else if (a[i] > b[j])
 		{
 			j++;
 		}
 		else
 		{
-			cout<<a[i]<<" ";
+			cout << a[i] << " ";
 			i++;
 			j++;
 		}
@@ -32,12 +32,12 @@ void intersection(int a[],int b[],int m,int n)//time comp. O(m+n) ; space comp. 
 
 int main()
 {
-	int a[]={3,5,10,10,10,15,15,20};
-	int b[]={5,10,10,15,30};
+	int a[] = {3, 5, 10, 10, 10, 15, 15, 20};
+	int b[] = {5, 10, 10, 15, 30};
 
-	int m=sizeof(a)/sizeof(int);
-	int n=sizeof(b)/sizeof(int);
+	int m = sizeof(a) / sizeof(int);
+	int n = sizeof(b) / sizeof(int);
 
-	intersection(a,b,m,n);
+	intersection(a, b, m, n);
 	return 0;
 }

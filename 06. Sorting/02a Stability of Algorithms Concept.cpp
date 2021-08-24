@@ -16,7 +16,7 @@ int main()
 	Kunal  |  B
 	Pulkit |  A
 	Yashul |  A
-	
+
 	Now sort table 1 using a "stable algo" on the basis of grade
 
 	Name   |  Grade
@@ -49,8 +49,8 @@ int main()
 
 	Conclusion :
 
-	With an unstable sort, there is no guarantee the alphabetical ordering is maintained 
-	as shown in the tables above. 
+	With an unstable sort, there is no guarantee the alphabetical ordering is maintained
+	as shown in the tables above.
 
 	*/
 	return 0;

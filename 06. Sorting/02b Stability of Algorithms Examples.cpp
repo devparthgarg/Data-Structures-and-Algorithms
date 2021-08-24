@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 int main()
 {
 	/*
-	
+
 	Stable Algorithms :
 
 	1.Bubble Sort
@@ -15,7 +16,7 @@ int main()
 	1.Selection
 	2.Quick Sort
 	3.Heap Sort
-	 
+
 	*/
 
 	return 0;
