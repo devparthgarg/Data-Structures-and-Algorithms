@@ -26,7 +26,7 @@ void bfs(vector<int> adj[], int s, bool visited[])
 
 int bfsCon(vector<int> adj[], int v)//time comp. O(V+E)
 {
-	bool visited[v + 1];
+	bool visited[v];
 	memset(visited, -1, sizeof(visited));
 
 	int cnt = 0;
