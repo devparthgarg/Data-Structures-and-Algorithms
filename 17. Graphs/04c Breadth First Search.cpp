@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//find number of islands problem
+//find number of islands problem or find number of connected components
 void bfs(vector<int> adj[], int s, bool visited[])
 {
 	queue<int> q;
