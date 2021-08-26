@@ -1,30 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*
-given undirected graph and source
-vertex find bfs
-*/
-
+//given undirected graph with source vertex print BFS
 void bfs(vector<int> adj[], int v, int s)//time comp. O(V+E)
 {
-	bool visited[v + 1];
-
-	//mark all false
+	bool visited[v];
 	memset(visited, false, sizeof(visited));
 
-	//make queue and push source
 	queue<int> q;
 	q.push(s);
-
-	//as source is pushed into queue so mark it visited
 	visited[s] = true;
 
-	//while queue is not empty traverse
 	while (!q.empty())
 	{
 		int u = q.front();
 		q.pop();
+
 		cout << u << " ";
 
 		for (int x : adj[u])
@@ -47,8 +38,9 @@ void addEdge(vector<int> adj[], int u, int v)
 int main()
 {
 	int v = 5;
-
 	vector<int> adj[v];
+	int s = 0;
+
 	addEdge(adj, 0, 1);
 	addEdge(adj, 0, 2);
 	addEdge(adj, 1, 2);
@@ -57,6 +49,6 @@ int main()
 	addEdge(adj, 3, 4);
 	addEdge(adj, 2, 4);
 
-	bfs(adj, v, 0);
+	bfs(adj, v, s);
 	return 0;
 }

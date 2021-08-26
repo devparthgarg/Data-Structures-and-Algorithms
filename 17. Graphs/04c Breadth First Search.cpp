@@ -1,21 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*
-apply bfs on disconnected graphs
-*/
-
-void bfs(vector<int> adj[], int s, bool visited[])//time comp. O(V+E)
+//find number of islands problem
+void bfs(vector<int> adj[], int s, bool visited[])
 {
 	queue<int> q;
 	q.push(s);
-	visited[s] = true;
+	visited[s] = false;
 
 	while (!q.empty())
 	{
 		int u = q.front();
 		q.pop();
-		cout << u << " ";
 
 		for (int x : adj[u])
 		{
@@ -28,18 +24,22 @@ void bfs(vector<int> adj[], int s, bool visited[])//time comp. O(V+E)
 	}
 }
 
-void bfsDis(vector<int> adj[], int v)
+int bfsCon(vector<int> adj[], int v)//time comp. O(V+E)
 {
 	bool visited[v + 1];
+	memset(visited, -1, sizeof(visited));
 
+	int cnt = 0;
 	for (int i = 0; i < v; i++)
 	{
 		if (visited[i] == false)
 		{
 			bfs(adj, i, visited);
-			cout << endl;
+			cnt++;
 		}
 	}
+
+	return cnt;
 }
 
 void addEdge(vector<int> adj[], int u, int v)
@@ -50,9 +50,9 @@ void addEdge(vector<int> adj[], int u, int v)
 
 int main()
 {
-	int v = 7;
-
+	int v = 11;
 	vector<int> adj[v];
+
 	addEdge(adj, 0, 1);
 	addEdge(adj, 0, 2);
 	addEdge(adj, 2, 3);
@@ -60,7 +60,9 @@ int main()
 	addEdge(adj, 4, 5);
 	addEdge(adj, 5, 6);
 	addEdge(adj, 4, 6);
+	addEdge(adj, 7, 8);
+	addEdge(adj, 9, 10);
 
-	bfsDis(adj, v);
+	cout << bfsCon(adj, v);
 	return 0;
 }
