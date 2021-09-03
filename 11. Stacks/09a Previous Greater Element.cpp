@@ -23,7 +23,7 @@ void previousGreater(int a[], int n)//time comp. O(n^2) ; space comp. O(1)
 
 int main()
 {
-	int arr[] = {15, 10, 18, 12, 4, 6, 2, 8};
+	int arr[] = {15, 10, 18, 12, 4, 6, 2, 9};
 	int n = sizeof(arr) / sizeof(int);
 
 	previousGreater(arr, n);
