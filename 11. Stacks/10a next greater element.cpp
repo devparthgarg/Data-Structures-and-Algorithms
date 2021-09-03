@@ -6,7 +6,7 @@ void nextGreater(int a[], int n)//time comp. O(n^2) ; space comp. O(1)
 	for (int i = 0; i < n; i++)
 	{
 		int j = 0;
-		for (int j = i + 1; j < n; j++)
+		for (j = i + 1; j < n; j++)
 		{
 			if (a[j] > a[i])
 			{
