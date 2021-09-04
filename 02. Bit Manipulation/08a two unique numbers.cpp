@@ -3,7 +3,6 @@ using namespace std;
 
 void twoUnique(int a[], int n)//time comp. O(n^2)
 {
-
     for (int i = 0; i < n; i++)
     {
         int count = 0;
