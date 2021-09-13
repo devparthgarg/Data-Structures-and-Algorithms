@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Inversion : i<j and a[i]>a[j]
+
 int countInversions(int a[], int n)//time comp. O(n^2) ; spoce comp. O(1)
 {
 	int cnt = 0;

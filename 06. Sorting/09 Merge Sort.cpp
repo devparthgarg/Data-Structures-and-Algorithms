@@ -54,7 +54,7 @@ void merge(int a[], int low, int mid, int high)
 
 void mergeSort(int a[], int low, int high) //time comp. O(n*logn) ; space comp. O(n) ; stable algorithm
 {
-	if (low < high) //at least two elements show be there
+	if (low < high) //at least two elements should be there
 	{
 		//divide
 		int mid = low + (high - low) / 2; //same as (low+high)/2 (to avoid overflow (high-low) is done)
