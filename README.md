@@ -7,7 +7,7 @@ Fork the repo and clone it.
 ```
 git clone https://github.com/whoparthgarg/Data-Structures-and-Algorithms.git
 ```
-
+## Contents
 SNo | Name |
 ----|------|
 1 | [Mathematics](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/01.%20Mathematics)
