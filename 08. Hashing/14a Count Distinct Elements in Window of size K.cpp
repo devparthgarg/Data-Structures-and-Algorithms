@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void distinctInKSizeWindow(int a[], int n, int k)
+void distinctInKSizeWindow(int a[], int n, int k)//time comp. O((n-k)*k*k) ; space comp. O(1)
 {
 	for (int i = 0; i <= n - k; i++)
 	{

@@ -1,29 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void distinctInKSizeWindow(int a[], int n, int k)//time comp. O(n) ; space comp. O(k)
+void distinctInKSizeWindow(int *a, int n, int k)//time comp. O((n-k)*k) ; space comp. O(k)
 {
-	unordered_map<int, int> m;
-
-	for (int i = 0; i < k; i++)
+	for (int i = 0; i <= n - k; i++)
 	{
-		m[a[i]]++;
-	}
-
-	cout << m.size() << " ";
-
-	for (int i = k; i < n; i++)
-	{
-		m[a[i - k]]--;
-
-		if (m[a[i - k]] == 0)
+		set<int> s;
+		for (int j = i; j < i + k; j++)
 		{
-			m.erase(a[i - k]);
+			s.insert(a[j]);
 		}
-
-		m[a[i]]++;
-
-		cout << m.size() << " ";
+		cout << s.size() << " ";
 	}
 }
 
