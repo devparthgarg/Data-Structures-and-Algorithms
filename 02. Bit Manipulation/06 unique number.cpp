@@ -4,7 +4,7 @@ using namespace std;
 //find the element which occurs only once
 
 //trick 1 : xor of same numbers gives zero
-//trick 2 : xor of zero with any number returns original number
+//trick 2 : xor of zero with any number returns the number
 int unique(int a[], int n)//time comp. O(n)
 {
 	int X = 0;
