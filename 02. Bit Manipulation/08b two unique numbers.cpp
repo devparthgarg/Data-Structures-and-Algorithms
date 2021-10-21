@@ -14,7 +14,9 @@ void twoUnique(int a[], int n)//time comp. O(n)
     //2. find position of right most set bit in X
     int right_set_bit = X & ~(X - 1);
 
-    //3. divide whole array into 2 parts : a.containing right_set_bit b.not conatining right_set_bit
+    //3. divide whole array into 2 parts :
+    //a.containing right_set_bit
+    //b.not conatining right_set_bit
     int res1 = 0, res2 = 0;
 
     for (int i = 0; i < n; i++)
