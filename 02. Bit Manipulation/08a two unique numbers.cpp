@@ -23,7 +23,7 @@ void twoUnique(int a[], int n)//time comp. O(n^2)
 
 int main()
 {
-    int a[] = {1, 1, 2, 2, 3, 3, 4, 4, 5, 6};
+    int a[] = {1, 3, 2, 1, 3, 4, 2, 5, 4, 6};
     int n = sizeof(a) / sizeof(int);
 
     twoUnique(a, n);
