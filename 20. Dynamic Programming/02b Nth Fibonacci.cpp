@@ -12,16 +12,11 @@ int fib(int n)//time comp. O(n) ; space comp. O(n)
 		{
 			return dp[n] = n;
 		}
-		else
-		{
-			dp[n] = fib(n - 1) + fib(n - 2);
-			return dp[n];
-		}
+
+		dp[n] = fib(n - 1) + fib(n - 2);
 	}
-	else
-	{
-		return dp[n];
-	}
+
+	return dp[n];
 }
 
 int main()
