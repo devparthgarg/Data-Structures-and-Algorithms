@@ -1,11 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int dp[10000][10000];//2D array because 2 parameters are changing m and n
-
 //Tabulation
 int lcs(string s1, string s2, int m, int n) //time comp. O(m*n)
 {
+	int dp[m + 1][n + 1]; //2D array because 2 parameters are changing m and n
 	memset(dp, 0, sizeof(dp));
 
 	for (int i = 1; i <= m; i++)
