@@ -4,24 +4,23 @@ using namespace std;
 //Tabulation
 int fib(int n)//time comp. O(n) ; space comp. O(n)
 {
-	int f[10000];
-	memset(f, -1, sizeof(f));
+	int dp[n + 1];
+	memset(dp, -1, sizeof(dp));
 
-	f[0] = 0;
-	f[1] = 1;
+	dp[0] = 0;
+	dp[1] = 1;
 
 	for (int i = 2; i <= n; i++)
 	{
-		f[i] = f[i - 1] + f[i - 2];
+		dp[i] = dp[i - 1] + dp[i - 2];
 	}
 
-	return f[n];
+	return dp[n];
 }
 
 int main()
 {
-	int n;
-	cin >> n;
+	int n = 5;
 
 	cout << fib(n) << endl;
 	return 0;

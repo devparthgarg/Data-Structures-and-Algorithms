@@ -10,8 +10,8 @@ int main()
 
 	Types:
 
-	1.Memoization (top down)
-	2.Tabulation (down top)
+	1.Memoization (top down approach)
+	2.Tabulation (bottom up approach)
 	*/
 
 	return 0;

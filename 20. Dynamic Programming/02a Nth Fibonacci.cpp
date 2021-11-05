@@ -14,8 +14,7 @@ int fib(int n)//time comp. O(2^n)
 
 int main()
 {
-	int n;
-	cin >> n;
+	int n = 5;
 
 	cout << fib(n) << endl;
 	return 0;
