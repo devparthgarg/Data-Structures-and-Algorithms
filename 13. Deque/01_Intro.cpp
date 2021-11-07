@@ -24,7 +24,7 @@ int main()
 
 	note:
 	1. All operations mentioned above are O(1) operations
-	2. In C++ STL ,Deque allows random access
+	2. In C++ STL, Deque allows random access
 		eg: dq[0],dq[3]
 
 	Implementation :
