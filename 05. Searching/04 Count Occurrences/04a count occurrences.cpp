@@ -2,7 +2,7 @@
 using namespace std;
 
 //linear search
-int countOcc(int a[], int n, int key) //time comp. O(n)
+int countOcc(int a[], int n, int key)//time comp. O(n)
 {
 	int cnt = 0;
 	for (int i = 0; i < n; i++)

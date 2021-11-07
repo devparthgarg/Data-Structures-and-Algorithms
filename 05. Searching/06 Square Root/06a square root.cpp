@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int sqRoot(int n) //time comp. O(sqrt(n))
+int sqRoot(int n)//time comp. O(sqrt(n))
 {
 	int i = 1;
 

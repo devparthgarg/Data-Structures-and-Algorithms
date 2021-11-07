@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int searchInfinite(int a[], int key) //time comp. O(p) p:position or index in array
+int searchInfinite(int a[], int key)//time comp. O(p) ; p:position or index in array
 {
 	int i = 0;
 

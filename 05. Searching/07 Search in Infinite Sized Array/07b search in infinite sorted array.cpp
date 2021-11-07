@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int binarySearch(int a[], int l, int h, int key) //time comp. O(logn)
+int binarySearch(int a[], int l, int h, int key)
 {
 	while (l <= h)
 	{

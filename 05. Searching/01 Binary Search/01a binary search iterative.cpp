@@ -2,7 +2,7 @@
 using namespace std;
 
 //for sorted arrays only
-int binarySearch(int a[], int n, int key) //time comp. O(logn) ; space comp. O(1)
+int binarySearch(int a[], int n, int key)//time comp. O(logn) ; space comp. O(1)
 {
     int low = 0;
     int high = n - 1;

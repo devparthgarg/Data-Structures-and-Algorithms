@@ -2,7 +2,7 @@
 using namespace std;
 
 //binary search (iterative)
-int lastOcc(int a[], int n, int key) //time comp. O(logn)
+int lastOcc(int a[], int n, int key)//time comp. O(logn)
 {
     int low = 0;
     int high = n - 1;

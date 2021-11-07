@@ -9,7 +9,7 @@ to mid element then apply binary search in left part of mid
 element , accordingly for comparison with right corner element
 */
 
-int searchRotated(int a[], int n, int key) //time comp. O(logn)
+int searchRotated(int a[], int n, int key)//time comp. O(logn)
 {
 	int low = 0;
 	int high = n - 1;
@@ -24,9 +24,13 @@ int searchRotated(int a[], int n, int key) //time comp. O(logn)
 		}
 
 		//left part is sorted
-		if (a[low] < a[mid])
+		if (a[low] <= a[mid])
 		{
-			if (a[low] <= key and key < a[mid])
+			if (a[low] == key)
+			{
+				return low;
+			}
+			else if (a[low] < key and key < a[mid])
 			{
 				high = mid - 1;
 			}
@@ -38,7 +42,11 @@ int searchRotated(int a[], int n, int key) //time comp. O(logn)
 		//right part is sorted
 		else
 		{
-			if (a[mid]<key and a[high] >= key)
+			if (a[high] == key)
+			{
+				return high;
+			}
+			else if (a[mid]<key and a[high] > key)
 			{
 				low = mid + 1;
 			}

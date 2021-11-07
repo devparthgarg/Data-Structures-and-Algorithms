@@ -3,12 +3,12 @@ using namespace std;
 
 /*
 problem is similar as finding first occurrence
-because array is binary and sorted so ,
-if we find first occurrence of 1 , then subtract it from
-last index to find count
+because array is binary and sorted so,
+if we find first occurrence of 1, then subtract it from
+last index to find count.
 */
 
-int count1s(int a[], int n) //time comp. O(logn)
+int count1s(int a[], int n)//time comp. O(logn)
 {
 	int low = 0;
 	int high = n - 1;

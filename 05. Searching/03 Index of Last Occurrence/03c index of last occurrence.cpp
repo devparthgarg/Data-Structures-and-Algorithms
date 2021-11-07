@@ -2,7 +2,7 @@
 using namespace std;
 
 //binary search (recursive)
-int lastOcc(int a[], int l, int h, int key, int n) //time comp. O(logn) ; space comp. O(logn)
+int lastOcc(int a[], int l, int h, int key, int n)//time comp. O(logn) ; space comp. O(logn)
 {
     //base case
     if (l > h)

@@ -2,7 +2,7 @@
 using namespace std;
 
 //for sorted arrays only
-int binarySearch(int a[], int low, int high, int key) //time comp. O(logn) ; space comp. O(logn)
+int binarySearch(int a[], int low, int high, int key)//time comp. O(logn) ; space comp. O(logn)
 {
     //base case
     if (low > high)

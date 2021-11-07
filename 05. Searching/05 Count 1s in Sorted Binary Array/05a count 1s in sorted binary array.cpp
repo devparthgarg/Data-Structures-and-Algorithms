@@ -2,7 +2,7 @@
 using namespace std;
 
 //linear search
-int count1s(int a[], int n) //time comp. O(n)
+int count1s(int a[], int n)//time comp. O(n)
 {
 	int cnt = 0;
 	for (int i = 0; i < n; i++)

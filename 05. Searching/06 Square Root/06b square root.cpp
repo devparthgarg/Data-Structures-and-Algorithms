@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int sqRoot(int n) //time comp. O(logn)
+int sqRoot(int n)//time comp. O(logn)
 {
 	int low = 0;
 	int high = n;

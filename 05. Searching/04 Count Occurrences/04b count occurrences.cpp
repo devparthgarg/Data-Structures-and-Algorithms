@@ -67,7 +67,7 @@ int lastOcc(int a[], int n, int key)
     return -1;
 }
 
-int countOcc(int a[], int n, int key) //time comp. O(logn)
+int countOcc(int a[], int n, int key)//time comp. O(logn)
 {
     int first = firstOcc(a, n, key);
 

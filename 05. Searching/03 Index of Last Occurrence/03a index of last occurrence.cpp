@@ -2,7 +2,7 @@
 using namespace std;
 
 //linear search
-int lastOcc(int a[], int n, int key) //time comp. O(n)
+int lastOcc(int a[], int n, int key)//time comp. O(n)
 {
     for (int i = n - 1; i >= 0; i--)
     {

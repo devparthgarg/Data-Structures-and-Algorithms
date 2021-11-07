@@ -13,7 +13,7 @@ we need to search in this kind of array
 */
 
 //linear search
-int searchRotated(int a[], int n, int key) //time comp. O(n)
+int searchRotated(int a[], int n, int key)//time comp. O(n)
 {
 	for (int i = 0; i < n; i++)
 	{
