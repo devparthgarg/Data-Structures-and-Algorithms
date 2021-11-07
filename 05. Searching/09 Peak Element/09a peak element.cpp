@@ -10,7 +10,7 @@ for last element only check its previous element
 you need to return any peak element
 */
 
-int peak(int a[], int n) //time comp. O(n)
+int peak(int a[], int n)//time comp. O(n)
 {
 	//base case
 	if (n == 1)

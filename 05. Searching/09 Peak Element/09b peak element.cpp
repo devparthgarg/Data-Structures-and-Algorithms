@@ -1,21 +1,37 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int peak(int a[], int n) //time comp. O(logn)
+int peak(int a[], int n)//time comp. O(logn)
 {
-	int low = 0;
-	int high = n - 1;
+	//base cases
+	if (n <= 1)
+	{
+		return a[0];
+	}
+
+	if (a[0] > a[1])
+	{
+		return a[0];
+	}
+
+	if (a[n - 1] > a[n - 2])
+	{
+		return a[n - 1];
+	}
+
+	//main code
+	int low = 1;
+	int high = n - 2;
 
 	while (low <= high)
 	{
-		int mid = (low + high) / 2;
+		int mid = low + (high - low) / 2;
 
-		if ((mid == 0 or a[mid - 1] < a[mid]) and (mid == n - 1 or a[mid] > a[mid + 1]))
+		if (a[mid] > a[mid - 1] and a[mid] > a[mid + 1])
 		{
 			return a[mid];
 		}
-
-		if (mid > 0 and a[mid - 1] > a[mid])
+		else if (a[mid] < a[mid - 1])
 		{
 			high = mid - 1;
 		}
