@@ -2,27 +2,24 @@
 using namespace std;
 
 //two pointer approach - only applicable on sorted arrays
-int threeSum(int a[], int n, int sum) //time comp. O(n^2)
+int threeSum(int a[], int n, int sum)//time comp. O(n^2) ; space comp. O(n)
 {
+	int cnt = 0;
+
 	for (int i = 0; i < n; i++)
 	{
-		int p1 = i + 1;
-		int p2 = n - 1;
-
-		while (p1 < p2)
+		unordered_set<int> s;
+		for (int j = i + 1; j < n; j++)
 		{
-			int curr_sum = a[i] + a[p1] + a[p2];
-			if (curr_sum == sum)
+			int x = sum - (a[i] + a[j]);
+
+			if (s.find(x) != s.end())
 			{
 				cnt++;
 			}
-			else if (curr_sum > sum)
-			{
-				p2--;
-			}
 			else
 			{
-				p1++;
+				s.insert(a[j]);
 			}
 		}
 	}

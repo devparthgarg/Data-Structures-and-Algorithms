@@ -2,7 +2,7 @@
 using namespace std;
 
 //two pointer approach - only applicable on sorted arrays
-bool threeSum(int a[], int n, int sum) //time comp. O(n^2)
+bool threeSum(int a[], int n, int sum)//time comp. O(n^2)
 {
 	for (int i = 0; i < n; i++)
 	{

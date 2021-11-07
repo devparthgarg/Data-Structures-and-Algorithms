@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool threeSum(int a[], int n, int sum) //time comp. O(n^3)
+bool threeSum(int a[], int n, int sum)//time comp. O(n^3)
 {
 	for (int i = 0; i < n; i++)
 	{

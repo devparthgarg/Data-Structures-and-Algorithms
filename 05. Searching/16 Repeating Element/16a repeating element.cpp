@@ -2,16 +2,17 @@
 using namespace std;
 
 /*
-find the only repeating element considering all conditions below :
-O(n) time
-O(1) space
-no modifications to original array
+Given an array, only one element is repeating in it.
+Find that element such that:
+--> n>=2
+--> only one element repeats any number of times
+--> all the elements from 0 to max(arr) are present
 */
 
 //super naive
-int repeatingElement(int a[], int n) //time comp. O(n^2) ; space comp. O(1)
+int repeatingElement(int a[], int n)//time comp. O(n^2) ; space comp. O(1)
 {
-	for (int i = 0; i < n - 1; i++)
+	for (int i = 0; i < n; i++)
 	{
 		for (int j = i + 1; j < n; j++)
 		{

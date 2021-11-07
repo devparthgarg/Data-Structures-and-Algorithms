@@ -2,7 +2,7 @@
 using namespace std;
 
 //two pointer approach - only applicable on sorted arrays
-bool twoSum(int a[], int n, int sum) //time comp. O(n)
+bool twoSum(int a[], int n, int sum)//time comp. O(n)
 {
 	int i = 0;
 	int j = n - 1;

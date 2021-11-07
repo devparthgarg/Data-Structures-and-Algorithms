@@ -1,26 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*
-find the only repeating element considering all conditions below :
-O(n) time
-O(1) space
-no modifications to original array
-*/
-
-int repeatingElement(int a[], int n) //time comp. O(n) ; space comp. O(n)
+int repeatingElement(int a[], int n)//time comp. O(n) ; space comp. O(1)
 {
-	bool visit[n];
-
-	memset(visit, false, sizeof(visit));
-
-	for (int i = 0; i < n; i++)
+	if (n > 1)
 	{
-		if (visit[a[i]])
+		int slow = a[n - 1];
+		int fast = a[a[n - 1]];
+
+		while (slow != fast)
 		{
-			return a[i];
+			slow = a[slow];
+			fast = a[a[fast]];
 		}
-		visit[a[i]] = true;
+
+		fast = n - 1;
+		while (slow != fast)
+		{
+			slow = a[slow];
+			fast = a[fast];
+		}
+
+		return slow;
 	}
 
 	return -1;

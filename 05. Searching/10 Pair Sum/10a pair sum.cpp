@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool twoSum(int a[], int n, int sum) //time comp. O(n^2)
+bool twoSum(int a[], int n, int sum)//time comp. O(n^2)
 {
 	for (int i = 0; i < n; i++)
 	{
