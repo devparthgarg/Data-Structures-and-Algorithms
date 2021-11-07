@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int firstOcc(int a[], int n, int key) //time comp. O(logn)
+int firstOcc(int a[], int n, int key)
 {
     int low = 0;
     int high = n - 1;
@@ -34,7 +34,7 @@ int firstOcc(int a[], int n, int key) //time comp. O(logn)
     return -1;
 }
 
-int lastOcc(int a[], int n, int key) //time comp. O(logn)
+int lastOcc(int a[], int n, int key)
 {
     int low = 0;
     int high = n - 1;
@@ -67,7 +67,6 @@ int lastOcc(int a[], int n, int key) //time comp. O(logn)
     return -1;
 }
 
-//binary search
 int countOcc(int a[], int n, int key) //time comp. O(logn)
 {
     int first = firstOcc(a, n, key);
