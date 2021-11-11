@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int unionArray(int a[], int b[], int m, int n) //time comp. O(n) ; space comp. O(a+b)
+int unionArray(int a[], int b[], int m, int n) //time comp. O(n) ; space comp. O(m+n)
 {
 	unordered_set<int> s(a, a + m);
 
