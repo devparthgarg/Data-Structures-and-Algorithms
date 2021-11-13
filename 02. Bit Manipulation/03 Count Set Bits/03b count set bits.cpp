@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Brian Kerningham's Algorithm
 //optimised for large values of n
 int setBits(int n)//time comp. O(total set bits)
 {
@@ -19,6 +20,6 @@ int main()
 {
 	int n = 5;//binary representation : 101
 
-	cout << setBits(n);
+	cout << setBits(n) << endl;
 	return 0;
 }

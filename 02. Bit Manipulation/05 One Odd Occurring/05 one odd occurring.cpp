@@ -5,7 +5,7 @@ using namespace std;
 
 //trick 1 : xor of two same numbers gives zero
 //trick 2 : xor of zero with any number returns the number
-int unique(int a[], int n)//time comp. O(n)
+int oneOdd(int a[], int n)//time comp. O(n)
 {
 	int X = 0;
 
@@ -22,6 +22,6 @@ int main()
 	int a[] = {1, 9, 2, 8, 3, 1, 9, 2, 8};
 	int n = sizeof(a) / sizeof(int);
 
-	cout << unique(a, n);
+	cout << oneOdd(a, n) << endl;
 	return 0;
 }

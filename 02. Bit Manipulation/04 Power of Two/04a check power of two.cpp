@@ -29,6 +29,6 @@ int main()
 {
 	int n = 5;//binary representation : 101
 
-	cout << isPower(n);
+	cout << isPower(n) << endl;
 	return 0;
 }

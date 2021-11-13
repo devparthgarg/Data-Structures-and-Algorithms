@@ -13,6 +13,6 @@ int main()
 	int n = 5;
 	int k = 1;
 
-	cout << kthBit(n, k);
+	cout << kthBit(n, k) << endl;
 	return 0;
 }

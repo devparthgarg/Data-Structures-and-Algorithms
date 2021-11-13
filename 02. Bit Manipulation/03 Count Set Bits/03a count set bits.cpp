@@ -21,6 +21,6 @@ int main()
 {
 	int n = 5;//binary representation : 101
 
-	cout << setBits(n);
+	cout << setBits(n) << endl;
 	return 0;
 }

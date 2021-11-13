@@ -26,6 +26,6 @@ int main()
 	int a[] = {1, 2, 3, 5, 6, 7, 8};
 	int n = 8;
 
-	cout << missing(a, n);
+	cout << missing(a, n) << endl;
 	return 0;
 }

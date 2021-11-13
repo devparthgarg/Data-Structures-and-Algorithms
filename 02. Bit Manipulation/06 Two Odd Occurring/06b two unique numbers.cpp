@@ -31,7 +31,7 @@ void twoUnique(int a[], int n)//time comp. O(n)
         }
     }
 
-    cout << res1 << " " << res2;
+    cout << res1 << " " << res2 << endl;
 }
 
 int main()

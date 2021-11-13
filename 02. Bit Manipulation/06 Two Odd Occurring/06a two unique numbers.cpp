@@ -19,6 +19,7 @@ void twoUnique(int a[], int n)//time comp. O(n^2)
             cout << a[i] << " ";
         }
     }
+    cout << endl;
 }
 
 int main()
