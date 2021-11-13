@@ -22,6 +22,6 @@ int main()
 {
 	int x = 2, n = 3;
 
-	cout << power(x, n);
+	cout << power(x, n) << endl;
 	return 0;
 }

@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Euclid's Theorem
 int hcf(int a, int b)
 {
 	return b == 0 ? a : hcf(b, a % b);

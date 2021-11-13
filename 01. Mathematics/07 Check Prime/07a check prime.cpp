@@ -23,6 +23,6 @@ int main()
 {
 	int n = 13;
 
-	cout << isPrime(n);
+	cout << isPrime(n) << endl;
 	return 0;
 }

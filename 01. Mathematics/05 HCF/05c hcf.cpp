@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Euclid's Theorem Optimised
 int hcf(int a, int b)//time comp. O(log(min(a,b))
 {
 	if (b == 0)

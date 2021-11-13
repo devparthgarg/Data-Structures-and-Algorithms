@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void sieve(int n)//time comp. O(n*log(log(n)))
+//Sieve of Erathosthenes
+void sieve(int n)//time comp. O(n*logn)
 {
 	vector<bool> isPrime(n + 1, true);
 
@@ -9,7 +10,7 @@ void sieve(int n)//time comp. O(n*log(log(n)))
 	{
 		if (isPrime[i])
 		{
-			for (int j = i * i; j <= n; j = j + i)
+			for (int j = 2 * i; j <= n; j = j + i)
 			{
 				isPrime[j] = false;
 			}
