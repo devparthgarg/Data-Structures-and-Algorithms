@@ -24,6 +24,6 @@ int main()
 {
 	int n = 12321;
 
-	cout << isPalindrome(n);
+	cout << isPalindrome(n) << endl;
 	return 0;
 }

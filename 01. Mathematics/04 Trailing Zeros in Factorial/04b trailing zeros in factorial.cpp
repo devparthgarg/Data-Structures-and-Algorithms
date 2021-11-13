@@ -19,6 +19,6 @@ int main()
 {
 	int n = 100;
 
-	cout << trailingZeros(n);
+	cout << trailingZeros(n) << endl;
 	return 0;
 }

@@ -18,6 +18,6 @@ int main()
 {
 	int n = 12345;
 
-	cout << countDigits(n);
+	cout << countDigits(n) << endl;
 	return 0;
 }

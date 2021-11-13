@@ -33,6 +33,6 @@ int main()
 {
 	int n = 10;
 
-	cout << trailingZeros(n);
+	cout << trailingZeros(n) << endl;
 	return 0;
 }
