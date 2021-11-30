@@ -16,7 +16,7 @@ public:
 	}
 };
 
-void nodeAtDistanceK(node *root, int k) //time comp. O(n) ; space comp. O(h) ; h:height of tree (logn)
+void nodeAtDistanceK(node *root, int k)//time comp. O(n) ; space comp. O(logn)
 {
 	if (root == NULL)
 	{

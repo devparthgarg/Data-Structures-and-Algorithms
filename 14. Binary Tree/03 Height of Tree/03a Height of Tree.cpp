@@ -16,12 +16,12 @@ public:
 	}
 };
 
-//here root height is not taken in account
-int height(node *root)//time comp. O(n) ; space comp. O(h) ; h:height of tree (logn)
+//here root height is also taken in account
+int height(node *root)//time comp. O(n) ; space comp. O(logn)
 {
 	if (root == NULL)
 	{
-		return -1;
+		return 0;
 	}
 
 	return (1 + max(height(root->left), height(root->right)));
