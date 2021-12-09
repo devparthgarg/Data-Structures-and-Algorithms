@@ -11,7 +11,7 @@ git clone https://github.com/whoparthgarg/Data-Structures-and-Algorithms.git
 SNo | Name |
 ----|------|
 1 | [Mathematics](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/01.%20Mathematics)
-2 | [Bit Magic](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/02.%20Bit%20Manipulation)
+2 | [Bit Manipulation](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/02.%20Bit%20Manipulation)
 3 | [Recursion](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/03.%20Recursion)	
 4 | [Arrays](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/04.%20Arrays)  	
 5 | [Searching](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/05.%20Searching)  
