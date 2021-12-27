@@ -4,15 +4,14 @@ using namespace std;
 //Time: O(n)
 //Space: O(n)
 
-void print(int n)
+int factorial(int n)
 {
     if (n == 0)
     {
-        return ;
+        return 1;
     }
 
-    print(n - 1);
-    cout << n << " ";
+    return n * factorial(n - 1);
 }
 
 int main()
@@ -20,6 +19,6 @@ int main()
     int n;
     cin >> n;
 
-    print(n);
+    cout << factorial(n);
     return 0;
 }

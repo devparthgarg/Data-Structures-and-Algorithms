@@ -4,15 +4,14 @@ using namespace std;
 //Time: O(n)
 //Space: O(n)
 
-void print(int n)
+int sum(int n)
 {
-    if (n == 0)
+    if (n == 1)
     {
-        return ;
+        return n;
     }
 
-    print(n - 1);
-    cout << n << " ";
+    return n + sum(n - 1);
 }
 
 int main()
@@ -20,6 +19,6 @@ int main()
     int n;
     cin >> n;
 
-    print(n);
+    cout << sum(n);
     return 0;
 }

@@ -3,21 +3,23 @@ using namespace std;
 
 void fun(int n)
 {
-    if(n==0)
+    //base case
+    if (n == 0)
     {
-        return ; 
+        return ;
     }
 
-    cout<<"Hello ";
-    fun(n-1);
+    //recursive case
+    cout << "Hello ";
+    fun(n - 1);
 }
 
 int main()
 {
     int n;
-    cin>>n;
+    cin >> n;
 
     fun(n);
-    
+
     return 0;
 }
