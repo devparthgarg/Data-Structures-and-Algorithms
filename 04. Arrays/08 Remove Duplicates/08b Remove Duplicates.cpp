@@ -1,16 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int removeDuplicate(int a[],int n)//time comp. O(n*logn) ; space comp. O(1)
-{
-    sort(a,a+n);
+//Time: O(n*logn)
+//Space: O(1)
 
-    int res=1;
-    for(int i=1;i<n;i++)
+int removeDuplicate(int a[], int n)
+{
+    sort(a, a + n);
+
+    int res = 1;
+    for (int i = 1; i < n; i++)
     {
-        if(a[i]!=a[i-1])
+        if (a[i] != a[i - 1])
         {
-            a[res]=a[i];
+            a[res] = a[i];
             res++;
         }
     }
@@ -18,29 +21,23 @@ int removeDuplicate(int a[],int n)//time comp. O(n*logn) ; space comp. O(1)
     return res;
 }
 
-void display(int a[],int n)
+void display(int a[], int n)
 {
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        cout<<a[i]<<" ";
+        cout << a[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
 }
 
 int main()
 {
-    int n;
-    cin>>n;
+    int arr[] = {3, 2, 4, 1, 5};
+    int n = sizeof(arr) / sizeof(int);
 
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
-
-    display(arr,n);
-    n=removeDuplicate(arr,n);
-    display(arr,n);
+    display(arr, n);
+    n = removeDuplicate(arr, n);
+    display(arr, n);
 
     return 0;
 }

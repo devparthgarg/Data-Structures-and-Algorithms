@@ -1,17 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void moveZeros(int a[],int n)//time comp. O(n^2)
+//Time: O(n^2)
+void moveZeros(int a[], int n)
 {
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        if(a[i]==0)
+        if (a[i] == 0)
         {
-            for(int j=i+1;j<n;j++)
+            for (int j = i + 1; j < n; j++)
             {
-                if(a[j]!=0)
+                if (a[j] != 0)
                 {
-                    swap(a[i],a[j]);
+                    swap(a[i], a[j]);
                     break;
                 }
             }
@@ -19,29 +20,23 @@ void moveZeros(int a[],int n)//time comp. O(n^2)
     }
 }
 
-void display(int a[],int n)
+void display(int a[], int n)
 {
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        cout<<a[i]<<" ";
+        cout << a[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
 }
 
 int main()
 {
-    int n;
-    cin>>n;
+    int arr[] = {0, 3, 2, 1, 0, 4, 7, 0, 2};
+    int n = sizeof(arr) / sizeof(int);
 
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
-
-    display(arr,n);
-    moveZeros(arr,n);
-    display(arr,n);
+    display(arr, n);
+    moveZeros(arr, n);
+    display(arr, n);
 
     return 0;
 }

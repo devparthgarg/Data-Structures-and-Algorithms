@@ -12,7 +12,9 @@ void reverse(int a[], int low, int high)
 }
 
 //Reversal Algorithm
-void rotateDspaces(int a[], int n, int d) //time comp. O(n) ; space comp. O(1)
+//Time: O(n)
+//Space: O(1)
+void rotateDspaces(int a[], int n, int d)
 {
     d = d % n; //to eleminate repeated iterations
 
@@ -37,17 +39,9 @@ void display(int a[], int n)
 
 int main()
 {
-    int n;
-    cin >> n;
-
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-
-    int d;
-    cin >> d;
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = sizeof(arr) / sizeof(int);
+    int d = 3;
 
     display(arr, n);
     rotateDspaces(arr, n, d);
