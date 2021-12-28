@@ -1,35 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int largest(int a[],int n)
+int largest(int a[], int n)
 {
-    int max=INT_MIN;
-    for(int i=0;i<n;i++)
+    int max = INT_MIN;
+    for (int i = 0; i < n; i++)
     {
-        if(a[i]>max)
+        if (a[i] > max)
         {
-            max=a[i];
+            max = a[i];
         }
     }
 
     return max;
 }
 
-int secondLargest(int arr[],int n)//time comp. O(n) - but it is taking 2 traversals : one in computing largest and and other in computing second largest
+//Time: O(n) (two traversals)
+int secondLargest(int arr[], int n)
 {
-    int max=largest(arr,n);
-    int res=0;
+    int max = largest(arr, n);
+    int res = 0;
     int i;
-    for(i=0;i<n;i++)
+    for (i = 0; i < n; i++)
     {
-        if(res<arr[i] and arr[i]!=max)
+        if (res < arr[i] and arr[i] != max)
         {
-            res=arr[i];
+            res = arr[i];
         }
-    }
-    if(i==n)
-    {
-        return -1;
     }
 
     return res;
@@ -37,15 +34,9 @@ int secondLargest(int arr[],int n)//time comp. O(n) - but it is taking 2 travers
 
 int main()
 {
-    int n;
-    cin>>n;
+    int arr[] = {3, 2, 4, 1, 5};
+    int n = sizeof(arr) / sizeof(int);
 
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
-
-    cout<<secondLargest(arr,n);
+    cout << secondLargest(arr, n) << endl;
     return 0;
 }

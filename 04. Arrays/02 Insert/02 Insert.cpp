@@ -1,45 +1,40 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int insert(int *arr,int n,int key,int pos)//time comp. O(n)
+//Time: O(n)
+int insert(int arr[], int n, int key, int pos)
 {
-    for(int i=n-1;i>=pos-1;i--)
+    for (int i = n - 1; i >= pos - 1; i--)
     {
-        arr[i+1]=arr[i];
+        arr[i + 1] = arr[i];
     }
-    arr[pos-1]=key;
+    arr[pos - 1] = key;
     n++;
-    
+
     return n;
 }
 
-void display(int arr[],int n)
+void display(int arr[], int n)
 {
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        cout<<arr[i]<<" ";
+        cout << arr[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
 
     return ;
 }
 
 int main()
 {
-    int n;
-    cin>>n;
+    int arr[] = {3, 2, 4, 1, 5};
+    int n = sizeof(arr) / sizeof(int);
+    int key = 6;
+    int pos = 3;
 
-    int arr[1000];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
+    display(arr, n);
+    n = insert(arr, n, key, pos);
+    display(arr, n);
 
-    int key,pos;
-    cin>>key>>pos;
-
-    display(arr,n);
-    n=insert(arr,n,key,pos);
-    display(arr,n);
     return 0;
 }

@@ -1,21 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int secondLargest(int arr[],int n)//time comp. O(n) - one traversal only
+//Time: O(n) (one traversal)
+int secondLargest(int arr[], int n)
 {
-    int greatest,secondGreatest;
-    greatest=secondGreatest=-1;
+    int greatest, secondGreatest;
+    greatest = secondGreatest = -1;
 
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        if(arr[i]>greatest)
+        if (arr[i] > greatest)
         {
-            secondGreatest=greatest;
-            greatest=arr[i];
-        }        
-        if(arr[i]<greatest and arr[i]>secondGreatest)
+            secondGreatest = greatest;
+            greatest = arr[i];
+        }
+        if (arr[i]<greatest and arr[i]>secondGreatest)
         {
-            secondGreatest=arr[i];
+            secondGreatest = arr[i];
         }
     }
 
@@ -24,15 +25,9 @@ int secondLargest(int arr[],int n)//time comp. O(n) - one traversal only
 
 int main()
 {
-    int n;
-    cin>>n;
+    int arr[] = {3, 2, 4, 1, 5};
+    int n = sizeof(arr) / sizeof(int);
 
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
-
-    cout<<secondLargest(arr,n);
+    cout << secondLargest(arr, n) << endl;
     return 0;
 }

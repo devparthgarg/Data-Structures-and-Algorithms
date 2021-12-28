@@ -1,14 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int largest(int a[],int n)//time comp. O(n)
+//Time: O(n)
+int largest(int a[], int n)
 {
-    int max=INT_MIN;
-    for(int i=0;i<n;i++)
+    int max = INT_MIN;
+    for (int i = 0; i < n; i++)
     {
-        if(a[i]>max)
+        if (a[i] > max)
         {
-            max=a[i];
+            max = a[i];
         }
     }
 
@@ -17,15 +18,9 @@ int largest(int a[],int n)//time comp. O(n)
 
 int main()
 {
-    int n;
-    cin>>n;
+    int arr[] = {3, 2, 4, 5, 1};
+    int n = sizeof(arr) / sizeof(int);
 
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
-
-    cout<<largest(arr,n);
+    cout << largest(arr, n) << endl;
     return 0;
 }

@@ -1,16 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool sorted(int a[],int n)//time comp. O(n)
+//Time: O(n)
+bool sorted(int a[], int n)
 {
-    if(n<=1)
+    if (n <= 1)
     {
         return true;
     }
 
-    for(int i=0;i<n-1;i++)
+    for (int i = 0; i < n - 1; i++)
     {
-        if(a[i]>a[i+1])
+        if (a[i] > a[i + 1])
         {
             return false;
         }
@@ -21,15 +22,9 @@ bool sorted(int a[],int n)//time comp. O(n)
 
 int main()
 {
-    int n;
-    cin>>n;
+    int arr[] = {3, 4, 5, 1, 2};
+    int n = sizeof(arr) / sizeof(int);
 
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
-
-    cout<<sorted(arr,n);
+    cout << sorted(arr, n) << endl;
     return 0;
 }

@@ -1,11 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int linearSearch(int arr[],int n,int key)//time comp. O(n)
+//Time: O(n)
+int linearSearch(int arr[], int n, int key)
 {
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        if(arr[i]==key)
+        if (arr[i] == key)
         {
             return i;
         }
@@ -16,18 +17,10 @@ int linearSearch(int arr[],int n,int key)//time comp. O(n)
 
 int main()
 {
-    int n;
-    cin>>n;
+    int arr[] = {3, 2, 4, 1, 5};
+    int n = sizeof(arr) / sizeof(int);
+    int key = 1;
 
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
-
-    int key;
-    cin>>key;
-
-    cout<<linearSearch(arr,n,key);
+    cout << linearSearch(arr, n, key) << endl;
     return 0;
 }

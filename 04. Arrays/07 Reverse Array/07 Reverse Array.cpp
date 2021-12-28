@@ -1,45 +1,40 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void reverse(int a[],int n)//time comp. O(n)
+//Time: O(n)
+void reverse(int a[], int n)
 {
-    if(n<=1)
+    if (n <= 1)
     {
         return ;
     }
 
-    int i=0;
-    int j=n-1;
-    while(i<j)
+    int i = 0;
+    int j = n - 1;
+    while (i < j)
     {
-        swap(a[i],a[j]);
+        swap(a[i], a[j]);
         i++;
         j--;
     }
 }
 
-void display(int a[],int n)
+void display(int a[], int n)
 {
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        cout<<a[i]<<" ";
+        cout << a[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
 }
 
 int main()
 {
-    int n;
-    cin>>n;
+    int arr[] = {3, 2, 4, 1, 5};
+    int n = sizeof(arr) / sizeof(int);
 
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
-
-    display(arr,n);
-    reverse(arr,n);
-    display(arr,n);
+    display(arr, n);
+    reverse(arr, n);
+    display(arr, n);
     return 0;
 }
