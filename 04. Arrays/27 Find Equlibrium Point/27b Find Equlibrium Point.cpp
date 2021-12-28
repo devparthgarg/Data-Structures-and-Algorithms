@@ -1,13 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*
-Equilibrium Point :
-A point such that sum of elements before it
-equals sum of element after it.
-*/
-
-bool isEquilibrium(int a[], int n)//time comp. O(n)
+//Time: O(n)
+bool isEquilibrium(int a[], int n)
 {
 	int sum = 0;
 	for (int i = 0; i < n; i++)

@@ -7,7 +7,8 @@ A point such that sum of elements before it
 equals sum of element after it.
 */
 
-bool isEquilibrium(int a[], int n)//time comp. O(n^2)
+//Time: O(n^2)
+bool isEquilibrium(int a[], int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -34,9 +35,9 @@ bool isEquilibrium(int a[], int n)//time comp. O(n^2)
 
 int main()
 {
-	int a[] = {3, 4, 8, -9, 20, 6};
-	int n = sizeof(a) / sizeof(int);
+	int arr[] = {3, 4, 8, -9, 20, 6};
+	int n = sizeof(arr) / sizeof(int);
 
-	cout << isEquilibrium(a, n);
+	cout << isEquilibrium(arr, n) << endl;
 	return 0;
 }
