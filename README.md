@@ -31,7 +31,7 @@ SNo | Name |
 19 | [Backtracking](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/19.%20Backtracking)     	
 20 | [Dynamic Programming](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/20.%20Dynamic%20Programming)
 
-### Big O Notation
+## Big O Notation
 
 *Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
 On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
@@ -52,7 +52,7 @@ Below is the list of some of the most used Big O notations and their performance
 | **O(2^N)**     | 1024                         | 1.26e+29                      | 1.07e+301                       |
 | **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
 
-### Data Structure Operations Complexity
+## Data Structure Operations Complexity
 
 | Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
 | ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
@@ -67,7 +67,7 @@ Below is the list of some of the most used Big O notations and their performance
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **Bloom Filter**        | -         | 1         | 1         | -         | False positives are possible while searching |
 
-### Array Sorting Algorithms Complexity
+## Array Sorting Algorithms Complexity
 
 | Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
@@ -80,4 +80,3 @@ Below is the list of some of the most used Big O notations and their performance
 | **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
 | **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
 | **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - length of longest key |
-
