@@ -1,20 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//efficient approach
-int leftMostRepeating(string s)//time comp. O(n) ; space comp. O(1)
-{
-	int count[256]={0};
-	int n=s.length();
+//Time: O(n)
+//Space: O(1)
 
-	for(int i=0;i<n;i++)
+int leftMostRepeating(string s)
+{
+	int count[256] = {0};
+	int n = s.length();
+
+	for (int i = 0; i < n; i++)
 	{
 		count[s[i]]++;
 	}
 
-	for(int i=0;i<n;i++)
+	for (int i = 0; i < n; i++)
 	{
-		if(count[s[i]]>1)
+		if (count[s[i]] > 1)
 		{
 			return i;
 		}
@@ -25,8 +27,8 @@ int leftMostRepeating(string s)//time comp. O(n) ; space comp. O(1)
 
 int main()
 {
-	string s="parthgarg";
+	string s = "parthgarg";
 
-	cout<<leftMostRepeating(s);
+	cout << leftMostRepeating(s);
 	return 0;
 }

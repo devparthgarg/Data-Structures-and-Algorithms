@@ -3,41 +3,43 @@ using namespace std;
 
 /*
 Subsequence :
-	a subsequence is a sequence that can be derived from another sequence 
-	by deleting some or no elements without changing the order of the remaining 
+	a subsequence is a sequence that can be derived from another sequence
+	by deleting some or no elements without changing the order of the remaining
 	elements.
 
 	eg :s1="ABCDE"
 		s2="ACE"
 
-		ss is a subsequence of s
+		s2 is a subsequence of s1
 */
 
-//iterative solution
-bool isSubsequence(string s1,string s2)//time comp. O(m+n) ; space comp. O(1)
+//Time: O(m+n)
+//Space: O(1)
+
+bool isSubsequence(string s1, string s2)
 {
-	int m=s1.length();
-	int n=s2.length();
+	int m = s1.length();
+	int n = s2.length();
 
-	int i=0,j=0;
+	int i = 0, j = 0;
 
-	while(i<m and j<n)
+	while (i < m and j < n)
 	{
-		if(s1[i]==s2[j])
+		if (s1[i] == s2[j])
 		{
 			j++;
 		}
 		i++;
 	}
 
-	return (j==n);
+	return (j == n);
 }
 
 int main()
 {
-	string s1="parth";
-	string s2="path";
+	string s1 = "parth";
+	string s2 = "path";
 
-	cout<<isSubsequence(s1,s2);
+	cout << isSubsequence(s1, s2);
 	return 0;
 }

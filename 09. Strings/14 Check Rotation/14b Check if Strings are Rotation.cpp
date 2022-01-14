@@ -1,7 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool isRotated(string s1, string s2)//time comp. O(n) ; space comp. O(m+n)
+//Time: O(n)
+//Space: O(m+n)
+
+bool isRotated(string s1, string s2)
 {
 	if (s1 == s2)
 	{

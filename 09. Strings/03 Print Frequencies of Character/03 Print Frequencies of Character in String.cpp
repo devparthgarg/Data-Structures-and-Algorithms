@@ -1,28 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void freq(string s)//time comp. O(n) ; space comp. O(1)
+//Time: O(n)
+//Space: O(1)
+void freq(string s)
 {
-	int count[26]={0};
-	int n=s.length();
+	int n = s.length();
+	int count[26] = {0};
 
-	for(int i=0;i<n;i++)
+	//fill count array
+	for (int i = 0; i < n; i++)
 	{
-		count[s[i]-'a']++;
+		count[s[i] - 'a']++;
 	}
 
-	for(int i=0;i<26;i++)
+	//print output
+	for (int i = 0; i < 26; i++)
 	{
-		if(count[i]!=0)
+		if (count[i] != 0)
 		{
-			cout<<char('a'+i)<<" "<<count[i]<<endl;
+			cout << char('a' + i) << " " << count[i] << endl;
 		}
 	}
 }
 
 int main()
 {
-	string s="parthgarg";
+	string s = "parthgarg";
 
 	freq(s);
 	return 0;

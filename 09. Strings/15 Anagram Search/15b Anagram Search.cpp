@@ -14,7 +14,9 @@ bool isSame(int a1[], int a2[])//time comp. O(1) ; constant because 256 is fixed
 	return true;
 }
 
-bool isAnagramPresent(string &txt, string &pat)//time comp. O(m) ; space comp. O(1)
+//Time: O(m)
+//Space: O(1)
+bool isAnagramPresent(string &txt, string &pat)
 {
 	int m = txt.length();
 	int n = pat.length();

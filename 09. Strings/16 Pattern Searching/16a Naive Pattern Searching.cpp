@@ -1,8 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//naive method
-void patternSearch(string s, string txt)//time comp. O(n^2) ; space comp. O(1)
+//Time: O(n^2)
+//Space: O(1)
+void patternSearch(string s, string txt)
 {
 	for (int i = 0; i < s.length(); i++)
 	{

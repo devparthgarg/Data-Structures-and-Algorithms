@@ -1,15 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//naive approach
-int leftMostRepeating(string s)//time comp. O(n^2) ; space comp. O(1)
+//Time: O(n^2)
+//Space: O(1)
+
+int leftMostRepeating(string s)
 {
-	int n=s.length();
-	for(int i=0;i<n;i++)
+	int n = s.length();
+	for (int i = 0; i < n; i++)
 	{
-		for(int j=i+1;j<n;j++)
+		for (int j = i + 1; j < n; j++)
 		{
-			if(s[i]==s[j])
+			if (s[i] == s[j])
 			{
 				return i;
 			}
@@ -21,8 +23,8 @@ int leftMostRepeating(string s)//time comp. O(n^2) ; space comp. O(1)
 
 int main()
 {
-	string s="parthgarg";
+	string s = "parthgarg";
 
-	cout<<leftMostRepeating(s);
+	cout << leftMostRepeating(s);
 	return 0;
 }

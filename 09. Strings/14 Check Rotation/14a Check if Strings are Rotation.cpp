@@ -11,7 +11,9 @@ void rotate(string &s)
 	s[s.length() - 1] = ch;
 }
 
-bool isRotated(string s1, string s2)//time comp. O(n^2) ; space comp. O(1)
+//Time: O(n^2)
+//Space: O(1)
+bool isRotated(string s1, string s2)
 {
 	if (s1 == s2)
 	{

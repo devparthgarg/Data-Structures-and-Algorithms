@@ -3,11 +3,11 @@ using namespace std;
 
 int main()
 {
-	char ch='a';
+	char ch = 'a';
 
-	for(int i=0;i<26;i++)
+	for (int i = 0; i < 26; i++)
 	{
-		cout<<ch<<" "<<int(ch)<<endl;
+		cout << ch << " " << int(ch) << endl;
 		ch++;
 	}
 

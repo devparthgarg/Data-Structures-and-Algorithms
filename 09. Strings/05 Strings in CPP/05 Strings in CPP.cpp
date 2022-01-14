@@ -5,18 +5,18 @@ int main()
 {
 	//in-built class named string in header file
 
-	string s="parthgarg";//s is the object of string class
+	string s = "parthgarg"; //s is the object of string class
 
 	//1.length function
-	cout<<s.length()<<endl;
+	cout << s.length() << endl;
 
 	//2.appending strings
-	s=s+"ji";
-	cout<<s<<endl;
+	s = s + "ji";
+	cout << s << endl;
 
 	//3.substr(starting index,length of string required) : getting substrings
-	cout<<s.substr(0,5)<<endl;
-	cout<<s.substr(1,5)<<endl;
+	cout << s.substr(0, 5) << endl;
+	cout << s.substr(1, 5) << endl;
 
 	//4.find(string)
 
@@ -25,25 +25,25 @@ int main()
 	else it returns special character string::npos
 	*/
 
-	cout<<s.find("garg")<<endl;
-	cout<<s.find("gag")<<endl;
+	cout << s.find("garg") << endl;
+	cout << s.find("gag") << endl;
 
 	//5.operators to compare strings lexiographically
 
-	string a="parth";
-	string b="garg";
+	string a = "parth";
+	string b = "garg";
 
-	if(a==b)
+	if (a == b)
 	{
-		cout<<"equal"<<endl;
+		cout << "equal" << endl;
 	}
-	else if(a>b)
+	else if (a > b)
 	{
-		cout<<"a greater than b"<<endl;
+		cout << "a greater than b" << endl;
 	}
 	else
 	{
-		cout<<"a smaller than b"<<endl;
+		cout << "a smaller than b" << endl;
 	}
 
 	return 0;

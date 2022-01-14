@@ -28,7 +28,9 @@ bool isAnagram(string s1, string s2)//time comp. O(n)
 	return true;
 }
 
-bool isAnagramPresent(string &txt, string &pat)//time comp. O((n-m+1)*m) ; space comp. O(1)
+//Time: O((n-m+1)*m)
+//Space: O(1)
+bool isAnagramPresent(string &txt, string &pat)
 {
 	int m = txt.length();
 	int n = pat.length();

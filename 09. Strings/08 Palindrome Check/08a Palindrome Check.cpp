@@ -7,22 +7,23 @@ Palindrome :
 	which reads the same backward as forward, such as madam or racecar.
 */
 
-//naive method
-bool isPalindrome(string s)//time comp. O(n) ; space comp. O(n)
+//Time: O(n)
+//Space: O(n)
+
+bool isPalindrome(string s)
 {
-	string rev=s;
+	string rev = s;
 
 	//reverse function
-	reverse(rev.begin(),rev.end());
+	reverse(rev.begin(), rev.end());
 
-	return (rev==s);
+	return (rev == s);
 }
 
 int main()
 {
-	string s="madam";
-	cin>>s;
+	string s = "madam";
 
-	cout<<isPalindrome(s);
+	cout << isPalindrome(s);
 	return 0;
 }

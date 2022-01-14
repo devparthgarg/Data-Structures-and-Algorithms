@@ -4,8 +4,8 @@ using namespace std;
 int main()
 {
 	string s;
-	getline(cin,s);//getline function reads full string "parth garg"
+	getline(cin, s); //getline function reads full string "parth garg"
 
-	cout<<s;
+	cout << s;
 	return 0;
 }

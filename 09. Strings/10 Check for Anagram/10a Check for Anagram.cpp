@@ -9,25 +9,27 @@ Anagram :
     eg : "silent" and "listen" are anagrams
 */
 
-//naive solution
-bool isAnagram(string s1,string s2)//time comp. O(m*logm +n*logn) ; space comp. O(1)
+//Time: O(m*logm +n*logn)
+//Space: O(1)
+
+bool isAnagram(string s1, string s2)
 {
-	if(s1.length()!=s2.length())
+	if (s1.length() != s2.length())
 	{
 		return false;
 	}
 
-	sort(s1.begin(),s1.end());
-	sort(s2.begin(),s2.end());
+	sort(s1.begin(), s1.end());
+	sort(s2.begin(), s2.end());
 
-	return (s1==s2);
+	return (s1 == s2);
 }
 
 int main()
 {
-	string s1="silent";
-	string s2="listen";
+	string s1 = "silent";
+	string s2 = "listen";
 
-	cout<<isAnagram(s1,s2);
+	cout << isAnagram(s1, s2);
 	return 0;
 }
