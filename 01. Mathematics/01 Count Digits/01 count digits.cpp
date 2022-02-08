@@ -1,7 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int countDigits(int n)//time comp. O(d) ; d:number of digits
+// Contributed by anindiangeek
+int CountDigits(int n) // O(1)
+{
+	return !n ? 0 : log10(n) + 1;
+}
+
+int countDigits(int n)//time comp. O(d) ; d:number of digits 
 {
 	int d = 0;
 
