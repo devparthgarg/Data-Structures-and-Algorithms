@@ -1,17 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int countDigits(int n)//time comp. O(d) ; d:number of digits
+//Time: O(1)
+int countDigits(int n)
 {
-	int d = 0;
-
-	while (n)
-	{
-		n = n / 10;
-		d++;
-	}
-
-	return d;
+	return floor(log10(n) + 1);
 }
 
 int main()

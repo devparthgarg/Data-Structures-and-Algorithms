@@ -1,23 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool isPalindrome(int n)//time comp. O(d) ; d:number of digits
-{
-	int org_no = n;
-	int rev = 0;
+/*
+Palindrome Numbers:
+A number that remains the same
+when its digits are reversed.
+*/
 
+//Time: O(logn)
+bool isPalindrome(int n)
+{
+	int original_number = n;
+
+	//reverse n
+	int rev = 0;
 	while (n)
 	{
 		rev = rev * 10 + n % 10;
-		n = n / 10;
+		n /= 10;
 	}
 
-	if (rev == org_no)
-	{
-		return true;
-	}
-
-	return false;
+	//check if original and rev same
+	return (rev == original_number);
 }
 
 int main()

@@ -1,15 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int trailingZeros(int n)//time comp. O(logn)
+//Time: O(logn)
+int trailingZeros(int n)
 {
 	int cnt = 0;
+
+	//count number of occurences of 5
 	int p = 5;
 
-	while (n / p)
+	while (p <= n)
 	{
 		cnt += n / p;
-		p = p * 5;
+		p *= 5;
 	}
 
 	return cnt;
@@ -17,7 +20,7 @@ int trailingZeros(int n)//time comp. O(logn)
 
 int main()
 {
-	int n = 100;
+	int n = 10;
 
 	cout << trailingZeros(n) << endl;
 	return 0;

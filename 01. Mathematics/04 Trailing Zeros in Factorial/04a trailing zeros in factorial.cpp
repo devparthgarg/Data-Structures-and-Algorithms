@@ -1,29 +1,44 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+Trailing Zeros in Factorial:
+number of zeros present in
+factorial of a number.
+*/
+
 int factorial(int n)
 {
 	int res = 1;
+
 	for (int i = 2; i <= n; i++)
 	{
-		res = res * i;
+		res *= i;
 	}
 
 	return res;
 }
 
-//not suitable for large factorials
-int trailingZeros(int n)//time comp. O(n)
+//Time: O(n)
+int trailingZeros(int n)
 {
-	//1.calculate factorial
+	//calculate factorial
 	int fact = factorial(n);
 
-	//2.count zeroes in factorial
+	//count number of zeros
 	int cnt = 0;
-	while (fact % 10 == 0)
+
+	while (fact)
 	{
-		fact = fact / 10;
-		cnt++;
+		if (fact % 10 == 0)
+		{
+			cnt++;
+			fact = fact / 10;
+		}
+		else
+		{
+			break;
+		}
 	}
 
 	return cnt;
