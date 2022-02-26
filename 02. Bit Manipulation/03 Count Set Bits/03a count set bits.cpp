@@ -1,16 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int setBits(int n)//time comp. O(logn)
+//Time: O(logn)
+int setBits(int n)
 {
 	int cnt = 0;
 
 	while (n)
 	{
-		if (n & 1)
-		{
-			cnt++;
-		}
+		cnt += n & 1;
 		n = n >> 1;
 	}
 
@@ -19,7 +17,8 @@ int setBits(int n)//time comp. O(logn)
 
 int main()
 {
-	int n = 5;//binary representation : 101
+	//5 binary is: 101
+	int n = 5;
 
 	cout << setBits(n) << endl;
 	return 0;

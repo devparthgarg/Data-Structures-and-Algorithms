@@ -1,6 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+All operations are O(1)
+*/
+
 int main()
 {
     int x = 2, y = 3;

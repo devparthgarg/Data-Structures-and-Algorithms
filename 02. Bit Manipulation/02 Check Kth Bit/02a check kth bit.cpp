@@ -1,18 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//k = [0,totalBits-1]
-int kthBit(int n, int k)
+/*
+Using Left Shift Operator
+*/
+
+//Time: O(1)
+bool kthBit(int n, int k)
 {
-	int mask = 1 << k;
-	return n & mask;
+	int mask = 1 << (k - 1);
+	return (n & mask);
 }
 
 int main()
 {
-	int n = 5;
-	int k = 1;
+	//6 in binary is: 110
+	int n = 6;
 
-	cout << kthBit(n, k) << endl;
+	//k range is: [1,32]
+	int k1 = 1;
+	int k2 = 2;
+	int k3 = 3;
+
+	cout << kthBit(n, k1) << endl;
+	cout << kthBit(n, k2) << endl;
+	cout << kthBit(n, k3) << endl;
 	return 0;
 }
