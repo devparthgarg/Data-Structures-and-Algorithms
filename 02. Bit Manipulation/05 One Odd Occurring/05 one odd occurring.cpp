@@ -1,27 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//find the element which occurs only once
+/*
+All numbers repeat except one number.
+Find that number.
+*/
 
-//trick 1 : xor of two same numbers gives zero
-//trick 2 : xor of zero with any number returns the number
-int oneOdd(int a[], int n)//time comp. O(n)
+//Time: O(n)
+int oneOddOccuring(vector<int> nums)
 {
-	int X = 0;
+	int n = nums.size();
 
+	//xor variable
+	int x = 0;
+
+	//take xor of whole array with x
 	for (int i = 0; i < n; i++)
 	{
-		X = X ^ a[i];
+		x = x ^ nums[i];
 	}
 
-	return X;
+	return x;
 }
 
 int main()
 {
-	int a[] = {1, 9, 2, 8, 3, 1, 9, 2, 8};
-	int n = sizeof(a) / sizeof(int);
+	vector<int> nums = {1, 9, 2, 8, 3, 1, 9, 2, 8};
 
-	cout << oneOdd(a, n) << endl;
+	cout << oneOddOccuring(nums) << endl;
 	return 0;
 }
