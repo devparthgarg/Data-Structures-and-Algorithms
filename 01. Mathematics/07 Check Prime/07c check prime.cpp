@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//more efficient for large values of n
-bool isPrime(int n)//time comp. O(sqrt(n))
+//Time: O(sqrt(n))
+bool isPrime(int n)
 {
 	if (n <= 1)
 	{
@@ -19,7 +19,7 @@ bool isPrime(int n)//time comp. O(sqrt(n))
 		return false;
 	}
 
-	for (int i = 5; i * i <= n; i = i + 6)
+	for (int i = 5; i * i <= n; i += 6)
 	{
 		if (n % i == 0 or n % (i + 2) == 0)
 		{

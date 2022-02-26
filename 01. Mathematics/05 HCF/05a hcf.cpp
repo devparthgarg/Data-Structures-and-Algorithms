@@ -1,17 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int hcf(int a, int b)//time comp. O(min(a,b))
+/*
+HCF or GCD:
+Greatest Common Divisor of two or more integers,
+which are not all zero, is the largest positive
+integer that divides each of the integers.
+*/
+
+//Time: O(min(a,b))
+int hcf(int a, int b)
 {
 	int res = min(a, b);
 
-	while (res >= 1)
+	while (res > 0)
 	{
 		if (a % res == 0 and b % res == 0)
 		{
 			return res;
 		}
-
 		res--;
 	}
 

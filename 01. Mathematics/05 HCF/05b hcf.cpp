@@ -1,8 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Euclid's Theorem
-int hcf(int a, int b)//time comp. O(log(min(a,b)))
+/*
+Euclid's Theorem:
+If we subtract a smaller number from a larger
+(we reduce a larger number), GCD doesn’t change.
+So if we keep subtracting repeatedly the larger of two,
+we end up with GCD.
+*/
+
+//Time: O(log(min(a,b)))
+int hcf(int a, int b)
 {
 	while (a != b)
 	{

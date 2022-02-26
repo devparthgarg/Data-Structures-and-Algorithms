@@ -1,15 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Euclid's Theorem
+/*
+Using Formula:
+HCF*LCM=a*b
+*/
+
 int hcf(int a, int b)
 {
 	return b == 0 ? a : hcf(b, a % b);
 }
 
-int lcm(int a, int b)//time comp. O(log(min(a,b)))
+//Time: O(log(min(a,b)))
+int lcm(int a, int b)
 {
-	//using --> a*b=hcf*lcm
 	return (a * b) / hcf(a, b);
 }
 

@@ -1,12 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Time: O(logn)
+//Time: O(1)
 int countDigits(int n)
 {
-	string s = to_string(n);
-
-	return s.size();
+	return floor(log10(n) + 1);
 }
 
 int main()

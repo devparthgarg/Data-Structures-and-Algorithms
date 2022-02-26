@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool isPrime(int n)//time comp. O(n)
+//Time: O(n)
+bool isPrime(int n)
 {
 	if (n <= 1)
 	{

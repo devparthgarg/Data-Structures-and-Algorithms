@@ -1,11 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int lcm(int a, int b)//time comp. O(a*b)
+/*
+LCM:
+the smallest positive integer that
+is evenly divisible by both a and b.
+*/
+
+//Time: O(a*b)
+int lcm(int a, int b)
 {
 	int res = max(a, b);
 
-	while (true)
+	while (res <= a * b)
 	{
 		if (res % a == 0 and res % b == 0)
 		{

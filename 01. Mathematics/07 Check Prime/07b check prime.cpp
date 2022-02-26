@@ -1,8 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//divisors always appear in pairs
-bool isPrime(int n)//time comp. O(sqrt(n))
+/*
+Divisors always appear in pairs.
+Eg: divisors of 12: 1,2,3,4,6,12
+Pairs: (1,12),(2,6),(3,4)
+*/
+
+//Time: O(sqrt(n))
+bool isPrime(int n)
 {
 	if (n <= 1)
 	{
