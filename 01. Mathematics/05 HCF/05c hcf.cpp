@@ -2,7 +2,11 @@
 using namespace std;
 
 /*
-Euclid's Theorem Optimised
+Suitable for large values of n
+*/
+
+/*
+Euclid's Theorem Optimised:
 instead of subtraction, if we divide the
 smaller number, the algorithm stops when
 we find remainder 0.

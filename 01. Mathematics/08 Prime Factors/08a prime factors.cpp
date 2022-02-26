@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool isPrime(int n)//time comp. O(sqrt(n))
+bool isPrime(int n)
 {
 	if (n <= 1)
 	{
@@ -29,7 +29,8 @@ bool isPrime(int n)//time comp. O(sqrt(n))
 	return true;
 }
 
-void primeFactors(int n)//time comp. O(n*sqrt(n)*logn)
+//Time: O(n*sqrt(n)*logn)
+void primeFactors(int n)
 {
 	for (int i = 2; i < n; i++)
 	{

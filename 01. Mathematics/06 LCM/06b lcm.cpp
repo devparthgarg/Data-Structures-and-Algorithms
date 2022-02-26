@@ -2,6 +2,10 @@
 using namespace std;
 
 /*
+Suitable for large values of n
+*/
+
+/*
 Using Formula:
 HCF*LCM=a*b
 */

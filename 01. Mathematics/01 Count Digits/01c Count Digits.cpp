@@ -2,6 +2,7 @@
 using namespace std;
 
 //Time: O(logn)
+//Space: O(logn)
 int countDigits(int n)
 {
 	string s = to_string(n);

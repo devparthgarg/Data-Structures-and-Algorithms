@@ -1,6 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+Suitable for large values of n
+*/
+
 //Time: O(sqrt(n))
 bool isPrime(int n)
 {
