@@ -9,6 +9,7 @@ Sort the array in minimum time complexity
 
 void kSorted(int a[], int n, int k)//time comp. O(n*logk) ; space comp. O(k)
 {
+	//min heap becuase elements are to be sorted and top element should be smallest
 	priority_queue<int, vector<int>, greater<int>> pq;
 
 	//push k elements into min heap

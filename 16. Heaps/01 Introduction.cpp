@@ -13,9 +13,9 @@ int main()
 
 	Two Types:
 
-		a.Min Heap - Children always greater than equals to parent
+		a.Min Heap - Min element always at top / Root is the smallest element
 
-		b.Max Heap - Children always smaller than equals to parent
+		b.Max Heap - Max element always at top / Root is the largest element
 
 	Properties:
 
@@ -27,7 +27,7 @@ int main()
 		right[i]=2*i+2
 		parent[i]=floor((i-1)/2)
 
-	Benefits:
+	Advantages:
 
 		a.Contigous Location
 

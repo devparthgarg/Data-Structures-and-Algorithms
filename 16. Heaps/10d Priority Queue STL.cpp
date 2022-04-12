@@ -24,6 +24,7 @@ struct compare
 
 int main()
 {
+	//min priority queue
 	priority_queue<Person, vector<Person>, compare> pq;
 
 	return 0;
