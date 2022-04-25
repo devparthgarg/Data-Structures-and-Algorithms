@@ -16,7 +16,7 @@ struct Trie
 
 		isEnd=false;
 	}
-}
+};
 
 //Time: O(n)
 bool search(Trie* root,string &key)
