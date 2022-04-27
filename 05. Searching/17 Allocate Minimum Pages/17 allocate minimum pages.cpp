@@ -1,67 +1,79 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool isFeasible(int arr[], int n, int k, int ans)
+bool isPossible(vector<int> &nums,int pages,int S)
 {
-	int req = 1;
-	int sum = 0;
+	int cnt=0;
+	int sumAllocated=0;
 
-	for (int i = 0; i < n; i++)
+	for(auto x:nums)
 	{
-		if (sum + arr[i] > ans)
+		if(sumAllocated+x>pages)
 		{
-			req++;
-			sum = arr[i];
+			cnt++;
+			sumAllocated=x;
+			if(sumAllocated>pages)
+			{
+				return false;
+			}
 		}
 		else
 		{
-			sum += arr[i];
+			sumAllocated+=x;
 		}
 	}
 
-	return (req <= k);
+	if(cnt<S)
+	{
+		return true;
+	}
+
+	return false;
 }
 
-int minPages(int arr[], int n, int k)//time comp. O(n*log(sum))
+int allocatePages(vector<int>& nums,int S)
 {
-	int sum = 0;
-	int mx = 0;
+	int n=nums.size();
 
-	for (int i = 0; i < n; i++)
+	//books should be greater than students
+	if(S>n)
 	{
-		sum += arr[i];
-		mx = max(mx, arr[i]);
+		return -1;
 	}
 
-	int low = mx;
-	int high = sum;
+	//find search space
+	int low=INT_MAX;
+	int high=0;
 
-	int res = 0;
-	while (low <= high)
+	for(auto x:nums)
 	{
-		int mid = (low + high) / 2;
+		low=min(low,x);
+		high+=x;
+	}
 
-		//check if left part is feasible
-		if (isFeasible(arr, n, k, mid))
+	//apply binary search
+	while(low<=high)
+	{
+		int mid=(low+high)/2;
+
+		if(isPossible(nums,mid,S))
 		{
-			res = mid;
-			high = mid - 1;
+			high=mid-1;
 		}
 		else
 		{
-			low = mid + 1;
+			low=mid+1;
 		}
 	}
 
-	return res;
+	return low;
 }
 
 int main()
 {
-	int arr[] = {10, 5, 30, 1, 2, 5, 10, 10};
-	int n = sizeof(arr) / sizeof(int);
-	int k = 3;
+	vector<int> nums={12,34,67,90};
+	int k = 2;
 
-	cout << minPages(arr, n, k);
+	cout << allocatePages(nums,k)<<endl;
 	return 0;
 }
