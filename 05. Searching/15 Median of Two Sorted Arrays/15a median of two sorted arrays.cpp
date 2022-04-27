@@ -40,6 +40,6 @@ int main()
 	int m = v1.size();
 	int n = v2.size();
 
-	cout << median(v1, v2);
+	cout << median(v1, v2)<<endl;
 	return 0;
 }
