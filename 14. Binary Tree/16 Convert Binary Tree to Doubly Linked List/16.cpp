@@ -29,6 +29,13 @@ void printDLL(Node* head)
 
 //Time: O(N)
 //Space: O(W) W:width of tree
+/*
+we need to do the inorder traversal of the Tree and while 
+doing inorder traversal we can simply maintain a previous 
+pointer or reference of the previously traversed node. And change 
+right child of the previous node to current node and left child 
+of current node as previous.
+*/
 Node* pre=NULL;
 Node* BTtoDLL(Node* root)
 {
