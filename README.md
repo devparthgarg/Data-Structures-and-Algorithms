@@ -30,6 +30,7 @@ SNo | Name |
 18 | [Greedy](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/18.%20Greedy%20Algorithms)     	
 19 | [Backtracking](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/19.%20Backtracking)     	
 20 | [Dynamic Programming](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/20.%20Dynamic%20Programming)
+21 | [Trie](https://github.com/whoparthgarg/Data-Structures-and-Algorithms/tree/main/21.%20Trie)
 
 ### Big O Notation
 
