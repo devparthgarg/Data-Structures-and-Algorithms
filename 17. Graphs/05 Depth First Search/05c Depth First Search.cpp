@@ -15,7 +15,7 @@ void dfsRec(vector<int> adj[], int s, bool visited[])
 }
 
 //count number of connected components
-int dfs(vector<int> adj[], int v, int s)//time comp. O(V+E)
+int dfs(vector<int> adj[], int v)//time comp. O(V+E)
 {
 	bool visited[v];
 	memset(visited, false, sizeof(visited));
@@ -50,6 +50,8 @@ int main()
 	addEdge(adj, 1, 2);
 	addEdge(adj, 3, 4);
 
-	cout << dfs(adj, v, 0);
+	cout << dfs(adj, v);
+	cout << endl;
+
 	return 0;
 }

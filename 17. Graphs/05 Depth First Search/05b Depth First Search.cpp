@@ -16,7 +16,7 @@ void dfsRec(vector<int> adj[], int s, bool visited[])
 }
 
 //sorce given and graph may be disconnected
-void dfs(vector<int> adj[], int v, int s)//time comp. O(V+E)
+void dfs(vector<int> adj[], int v)//time comp. O(V+E)
 {
 	bool visited[v];
 	memset(visited, false, sizeof(visited));
@@ -46,6 +46,6 @@ int main()
 	addEdge(adj, 1, 2);
 	addEdge(adj, 3, 4);
 
-	dfs(adj, v, 0);
+	dfs(adj, v);
 	return 0;
 }

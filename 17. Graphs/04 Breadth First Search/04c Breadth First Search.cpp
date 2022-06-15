@@ -64,5 +64,7 @@ int main()
 	addEdge(adj, 9, 10);
 
 	cout << bfsCon(adj, v);
+	cout << endl;
+
 	return 0;
 }
