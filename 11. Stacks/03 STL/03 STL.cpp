@@ -18,7 +18,7 @@ int main()
 	//top element
 	cout << s.top() << endl;
 
-	//pop elements from end of array
+	//pop elements from top of stack
 	s.pop();
 	s.pop();
 	s.pop();
