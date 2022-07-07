@@ -15,9 +15,6 @@ int main()
 	//size of stack
 	cout << s.size() << endl;
 
-	//OVERFLOW condition
-	s.push(60);
-
 	//top element
 	cout << s.top() << endl;
 
@@ -29,11 +26,7 @@ int main()
 	s.pop();
 
 	//check if stack empty, returns 1 if stack empty
-	cout << s.size() << endl;
-
-	//UNDERFLOW condition
-	s.pop();
-	s.top();
+	cout << s.empty() << endl;
 
 	//stack traversal
 	s.push(10);
@@ -45,6 +38,7 @@ int main()
 		cout << s.top() << " ";
 		s.pop();
 	}
+	cout << endl;
 
 	return 0;
 }
