@@ -1,6 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+All stack functions having time complexties 
+O(1)
+*/
+
 int main()
 {
 	stack<int> s;
