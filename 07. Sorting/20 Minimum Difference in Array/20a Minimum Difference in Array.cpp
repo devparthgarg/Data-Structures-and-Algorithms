@@ -4,7 +4,6 @@ using namespace std;
 int minDif(vector<int>& nums)//time comp. O(n^2) ; space comp. O(1)
 {
 	int n = nums.size();
-
 	int res = INT_MAX;
 
 	for (int i = 0; i < n; i++)
