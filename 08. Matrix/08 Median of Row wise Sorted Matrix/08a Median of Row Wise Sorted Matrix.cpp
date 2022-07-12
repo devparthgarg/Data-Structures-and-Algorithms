@@ -1,9 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-/*Assumptions :
+/*
+Assumptions :
 1.odd sized arrays
-2.all distinct elements*/
+2.all distinct elements
+*/
 int median(vector<vector<int>>& v)//time comp. O(r*c*log(r*c))
 {
 	vector<int> arr;
