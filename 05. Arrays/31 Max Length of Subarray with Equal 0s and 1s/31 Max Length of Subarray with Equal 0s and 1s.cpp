@@ -7,7 +7,7 @@ binary array will be given
 
 //time: O(n)
 //space: O(n)
-int findMaxLength(vector<int>& nums) 
+int maxEqualLength(vector<int>& nums) 
 {
     int n=nums.size();
     unordered_map<int,int> m;
