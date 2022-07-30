@@ -13,7 +13,8 @@ void prefixSum(int a[], int n)
     }
 }
 
-int getSum(int l, int r) //time comp. O(n)
+//time: O(1) (only time is taken by pre computation which is O(n))
+int getSum(int l, int r)
 {
     if (l == 0)
     {
@@ -25,25 +26,14 @@ int getSum(int l, int r) //time comp. O(n)
 
 int main()
 {
-    int n;
-    cin >> n;
+    int arr[]={2,8,3,9,6,5,4};
+    int n=sizeof(arr)/sizeof(int);
 
-    int a[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> a[i];
-    }
+    prefixSum(arr,n);
 
-    prefixSum(a, n);
-
-    int q;
-    cin >> q;
-    for (int i = 0; i < q; i++)
-    {
-        int l, r;
-        cin >> l >> r;
-        cout << getSum(l, r) << endl;
-    }
+    cout<<getSum(0,2)<<endl;
+    cout<<getSum(1,3)<<endl;
+    cout<<getSum(2,6)<<endl;
 
     return 0;
 }

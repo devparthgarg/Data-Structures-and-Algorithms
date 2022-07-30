@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Time: O(n)
+//time: O(n)
 bool isEquilibrium(int a[], int n)
 {
 	int sum = 0;
@@ -13,7 +13,7 @@ bool isEquilibrium(int a[], int n)
 	int left_sum = 0;
 	for (int i = 0; i < n; i++)
 	{
-		if (left_sum == sum - a[i])//sum-a[i] is same as right_sum
+		if (left_sum == sum - a[i])
 		{
 			return true;
 		}

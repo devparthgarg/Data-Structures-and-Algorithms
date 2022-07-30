@@ -7,7 +7,7 @@ A point such that sum of elements before it
 equals sum of element after it.
 */
 
-//Time: O(n^2)
+//time: O(n*n)
 bool isEquilibrium(int a[], int n)
 {
 	for (int i = 0; i < n; i++)
