@@ -36,7 +36,7 @@ int main()
 	--> disadvatnages:
 		- large values not handled
 		- strings not handled
-		- floating values not handled
+		- floating values not handled properly
 
 	Hashing:
 	--> take large keys and take hashing function
