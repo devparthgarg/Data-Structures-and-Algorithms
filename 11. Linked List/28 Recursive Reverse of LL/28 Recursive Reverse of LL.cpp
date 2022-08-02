@@ -15,21 +15,18 @@ public:
 };
 
 //Time: O(N)
-//Space: O(1)
+//Space: O(N)
 Node* reverse(Node* &head)
 {
-	Node* curr=head;
-	Node* prev=NULL;
-
-	while(curr)
+	if(head==NULL or head->next==NULL)
 	{
-		Node* nextNode=curr->next;
-		curr->next=prev;
-		prev=curr;
-		curr=nextNode;
+		return head;
 	}
 
-	return prev;
+	Node* n=reverse(head->next);
+	head->next->next=head;
+	head->next=NULL;
+	return n;
 }
 
 void print(Node* head)
