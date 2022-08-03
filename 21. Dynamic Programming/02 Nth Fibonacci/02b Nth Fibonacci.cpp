@@ -13,7 +13,7 @@ int fib(int n)//time comp. O(n) ; space comp. O(n)
 			return dp[n] = n;
 		}
 
-		dp[n] = fib(n - 1) + fib(n - 2);
+		return dp[n] = fib(n - 1) + fib(n - 2);
 	}
 
 	return dp[n];

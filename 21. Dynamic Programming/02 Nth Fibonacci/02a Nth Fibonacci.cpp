@@ -4,7 +4,7 @@ using namespace std;
 //Recursion
 int fib(int n)//time comp. O(2^n)
 {
-	if (n == 0 or n == 1)
+	if (n<=1)
 	{
 		return n;
 	}
