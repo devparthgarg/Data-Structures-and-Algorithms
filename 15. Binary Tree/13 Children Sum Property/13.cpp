@@ -20,11 +20,11 @@ public:
 Children Sum Property:
 It is a property in which the sum 
 of values of the left child and right child should be 
-equal to the value of their node if both children are present. 
+equal to the value of their parent node if both children are present. 
 Else if only one child is present then the value of the child 
-should be equal to its node value.
+should be equal to its parent node value.
 
-for a tree to satisy children sum property: all nodes
+for a tree to satisfy children sum property: all nodes
 must follow this property, if one nodes fails. Then, the 
 whole tree fails at it.
 */
