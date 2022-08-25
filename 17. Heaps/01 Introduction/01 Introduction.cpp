@@ -13,9 +13,9 @@ int main()
 
 	Two Types:
 
-		a.Min Heap - Min element always at top / Root is the smallest element
+		a.Min Heap - Min element always at top / Every node is smaller than its descendants
 
-		b.Max Heap - Max element always at top / Root is the largest element
+		b.Max Heap - Max element always at top / Every node is greater than its descendants
 
 	Properties:
 

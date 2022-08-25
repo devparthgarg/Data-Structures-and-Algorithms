@@ -31,6 +31,24 @@ public:
 		return (i - 1) / 2;
 	}
 
+	void insert(int x)//time comp. O(logn)
+	{
+		if (size == capacity)
+		{
+			return ;
+		}
+
+		size++;
+		arr[size - 1] = x;
+
+		int i = size - 1;
+		while (i > 0 and arr[parent(i)] > arr[i])
+		{
+			swap(arr[parent(i)], arr[i]);
+			i = parent(i);
+		}
+	}
+
 	void minHeapify(int i)
 	{
 		//find index of smallest element of the three elements

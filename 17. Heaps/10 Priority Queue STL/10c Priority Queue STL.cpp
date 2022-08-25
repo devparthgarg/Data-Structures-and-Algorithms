@@ -7,7 +7,7 @@ int main()
 	int n = sizeof(a) / sizeof(int);
 
 	//make priority queue using an existing array/vector
-	priority_queue<int> pq(a, a + n);//O(n) (push will take more time)
+	priority_queue<int> pq(a, a + n);//O(n) (iterating and pushing will take more time)
 
 	//iterating
 	while (!pq.empty())
