@@ -4,6 +4,7 @@ using namespace std;
 int main()
 {
 	/*
+
 	Introduction:
 	deque : doubly ended queue
 	meaning that it has two ends : front and rear
@@ -30,6 +31,7 @@ int main()
 	Implementation :
 	1.Linked List (doubly)
 	2.Array (circular)
+	
 	*/
 
 	return 0;

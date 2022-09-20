@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//printing using "for each" loop
 void print(deque<int> dq)
 {
 	for (auto x : dq)
