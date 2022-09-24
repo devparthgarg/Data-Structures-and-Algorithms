@@ -20,11 +20,9 @@ bool compare2(point p1, point p2)
 int main()
 {
 	point a[] = {{12, 23}, {8, 9}, {5, 6}};
-
 	int n = sizeof(a) / sizeof(a[0]);
 
 	sort(a, a + n, compare1);
-
 	for (auto k : a)
 	{
 		cout << k.x << " " << k.y << endl;
@@ -32,7 +30,6 @@ int main()
 	cout << "----" << endl;
 
 	sort(a, a + n, compare2);
-
 	for (auto k : a)
 	{
 		cout << k.x << " " << k.y << endl;

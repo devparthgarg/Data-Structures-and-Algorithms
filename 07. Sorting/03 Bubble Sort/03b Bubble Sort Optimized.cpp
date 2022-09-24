@@ -1,12 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void bubbleSort(int a[], int n) //time comp. O(n^2) ; space comp. O(1) ; stable algorithm
+//time: O(n*n)
+//space: O(1)
+void bubbleSort(int a[], int n) 
 {
-	for (int i = 0; i < n - 1; i++) //n-1 passes
+	for (int i = 0; i < n - 1; i++) 
 	{
 		bool flag = false;
-		for (int j = 0; j < n - i - 1; j++) //for bubbling(largest element at last -> second largest at it correct positon...)
+		for (int j = 0; j < n - i - 1; j++) 		
 		{
 			if (a[j] > a[j + 1])
 			{

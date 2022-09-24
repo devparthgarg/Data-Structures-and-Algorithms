@@ -7,7 +7,6 @@ int main()
 	int n = sizeof(a) / sizeof(int);
 
 	sort(a, a + n); //sorting increasing form
-
 	for (int x : a)
 	{
 		cout << x << " ";
@@ -15,7 +14,6 @@ int main()
 	cout << endl;
 
 	sort(a, a + n, greater<int>()); //sorting decreasing form
-
 	for (int x : a)
 	{
 		cout << x << " ";

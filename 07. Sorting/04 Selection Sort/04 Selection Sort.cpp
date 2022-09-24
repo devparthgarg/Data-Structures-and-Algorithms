@@ -1,7 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void selectionSort(int a[], int n) //time comp. O(n^2) ; space comp. O(1) ; unstable algorithm
+/*
+Selection Sort: Unstable Algo
+it maintains two arrays
+one which is sorted and 
+one which is not sorted
+find the element which is min 
+and place this element at its
+correct position.
+*/
+
+//time: O(n*n)
+//space: O(1)
+void selectionSort(int a[], int n) 
 {
 	//find ith min. element and place in correct position
 	for (int i = 0; i < n - 1; i++)

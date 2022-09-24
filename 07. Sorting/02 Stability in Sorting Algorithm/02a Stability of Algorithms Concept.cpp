@@ -28,7 +28,7 @@ int main()
 	Kunal  |  B
 	Parth  |  C
 
-	Now sort table 2 using a "unstable algo" on the basis of grade
+	Now sort table 1 using a "unstable algo" on the basis of grade
 
 	Name   |  Grade
 		   |
