@@ -38,7 +38,7 @@ int main()
     
     cout<<sum1(n)<<endl;
     cout<<sum2(n)<<endl;
-    cout<<sum3(n)<<endl;
+    cout<<sum3(n)+15<<endl;
     
     /*
     which of the above is most efficient ?
